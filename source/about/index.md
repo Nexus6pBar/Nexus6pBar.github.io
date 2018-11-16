@@ -1,5 +1,7 @@
 ---
 tltle: about
+type:
+- default
 ---
 
 [https://github.com/Nexus6pBar/Nexus6pBar.github.io](https://github.com/Nexus6pBar/Nexus6pBar.github.io)
