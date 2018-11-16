@@ -1,7 +1,5 @@
 ---
 tltle: about
-type:
-- default
 ---
 
 [https://github.com/Nexus6pBar/Nexus6pBar.github.io](https://github.com/Nexus6pBar/Nexus6pBar.github.io)
@@ -21,6 +19,13 @@ master分支：Hexo编译后的网站
 这个网站基于Hexo构建，而Hexo依赖Node.js环境。请在您的计算机上安装Node.js并参考相关教程将其加入环境变量。
 
 [Download｜Node.js](https://nodejs.org/en/download/)
+
+安装Hexo
+
+```
+$ npm install
+
+```
 
 使用下面这个命令对项目进行编译
 
@@ -50,8 +55,7 @@ QQ群：740661764
 
 ### License
 
-###### 对于本网站所有原创内容，如无特殊声明使用 CC BY-SA 
-4.0 License
+###### 对于本网站所有原创内容，如无特殊声明使用 CC BY-SA 4.0 License
  
 > This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. 
 

@@ -190,7 +190,7 @@ sns_share:
     googleplus: false
     weibo: true
     linkedin: false
-    qq: true
+    qq: false
     telegram: false
 
 # Sidebar Customize

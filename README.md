@@ -20,6 +20,13 @@ master分支：Hexo编译后的网站
 
 [Download｜Node.js](https://nodejs.org/en/download/)
 
+安装Hexo
+
+```
+$ npm install
+
+```
+
 使用下面这个命令对项目进行编译
 
 ```
@@ -32,7 +39,7 @@ $ hexo g
 $ hexo s
 ```
 
-这将在您的电脑上运行一个本地的HTTP服务器，默认端口为4000。也就是说，在浏览器中访问[localhost:4000](localhost:4000)
+这将在您的电脑上运行一个本地的HTTP服务器，默认端口为4000。也就是说，在浏览器中访问 [localhost:4000](localhost:4000)
 
 更多关于Hexo的使用帮助请参阅官方网站 [Hexo](http://hexo.io/zh-cn)
 
@@ -48,8 +55,7 @@ QQ群：740661764
 
 ### License
 
-###### 对于本网站所有原创内容，如无特殊声明使用 CC BY-SA 
-4.0 License
+###### 对于本网站所有原创内容，如无特殊声明使用 CC BY-SA 4.0 License
  
 > This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA. 
 
