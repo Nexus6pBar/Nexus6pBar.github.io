@@ -22,9 +22,7 @@ after_script:
   - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:master
 # E: Build LifeCycle
 
-branches:
-  only:
-    - blog-resource
+
 env:
  global:
    - GH_REF: github.com/BaiduNexus6pBar/BaiduNexus6pBar.github.io.git
