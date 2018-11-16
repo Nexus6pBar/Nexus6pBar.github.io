@@ -143,7 +143,7 @@ hanabi:
 #   For example, you can setup a CC license as:
 #       'This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>'
 # You can also use Front-Matter `license` to override this setting.
-license: 'This blog is under a CC BY-SA 4.0 License'
+license: 'This blog is under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0 License</a>'
 
 # Gallery Panel
 # You must activate Formspree before using
@@ -195,7 +195,7 @@ sns_share:
 
 # Sidebar Customize
 sidebar:
-    dropdown:
+#    dropdown:
     homepage:
         use: true
         icon: home
@@ -205,16 +205,16 @@ sidebar:
         icon: inbox
         divider: false
     categories:
-        use: false
+        use: true
         icon: chrome_reader_mode
         divider: false
     pages:
-        #About:
-            #link: "/about"
-            #icon: person
-            #divider: false
+        About:
+            link: "/about"
+            icon: person
+            divider: false
     article_num:
-        use: false
+        use: true
         divider: false
     footer:
         divider: true
@@ -234,16 +234,17 @@ sidebar:
 # If you want to use gitment or gitalk,you should get the client_id and client_secret from https://github.com/settings/applications/new
 # If you want to use valine,you should get the app_id and app_key from https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
-    use:
-    shortname: # duoshuo or disqus shortname
+    use: gitment
+    shortname: 
     changyan_appid:
     changyan_conf:
     changyan_thread_key_type: path
     livere_data_uid:
-    gitment_repo:   # git repo of the hexo
-    gitment_owner:  # git repo's owner
-    gitment_client_id:  # github app client id
-    gitment_client_secret :  # github app client secret
+    gitment_id: '<%= page.title %>'
+    gitment_repo: Nexus6pBarGitment
+    gitment_owner: singleNeuron
+    gitment_client_id: d95c55639ce9c2747a43 
+    gitment_client_secret: 5f19b1041793e0f7bdcfa8a03f979c30ac3458f4
     valine_leancloud_appId:  # leancloud application app id
     valine_leancloud_appKey:  # leancloud application app key
     valine_notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
