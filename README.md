@@ -1,6 +1,6 @@
 # BaiduNexus6pBar.github.io
 
-![](https://travis-ci.org/BaiduNexus6pBar/BaiduNexus6pBar.github.io.svg?branch=source)
+![](https://travis-ci.org/Nexus6pBar/Nexus6pBar.github.io.svg?branch=source)
 
 -------
 
