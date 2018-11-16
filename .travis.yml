@@ -18,7 +18,7 @@ after_script:
   - git config user.name "singleNeuron"
   - git config user.email "liziyuan123456@yeah.net"
   - git add .
-  - git commit -m "Update docs"
+  - git commit -m "Auto deploy by Travis-Ci"
   - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:master
 # E: Build LifeCycle
 
