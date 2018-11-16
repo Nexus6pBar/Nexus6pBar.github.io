@@ -1,8 +1,8 @@
-# BaiduNexus6pBar.github.io
+---
+tltle: about
+---
 
-![](https://travis-ci.org/BaiduNexus6pBar/BaiduNexus6pBar.github.io.svg?branch=source)
-
--------
+[https://github.com/Nexus6pBar/Nexus6pBar.github.io](https://github.com/Nexus6pBar/Nexus6pBar.github.io)
 
 这是一个由百度Nexus6P吧官方群部分dalao维护的关于Nexus6P的教程网站。
 
