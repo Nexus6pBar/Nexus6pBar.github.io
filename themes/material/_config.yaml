@@ -241,8 +241,8 @@ comment:
     changyan_thread_key_type: path
     livere_data_uid:
     gitment_id: '<%= page.title %>'
-    gitment_repo: Nexus6pBar.github.io
-    gitment_owner: Nexus6pBar
+    gitment_repo: Nexus6pBarGitment
+    gitment_owner: singleNeuron
     gitment_client_id: d95c55639ce9c2747a43 
     gitment_client_secret: 5f19b1041793e0f7bdcfa8a03f979c30ac3458f4
     valine_leancloud_appId:  # leancloud application app id
