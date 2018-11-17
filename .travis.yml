@@ -19,7 +19,8 @@ after_script:
   - git config user.name "singleNeuron"
   - git config user.email "liziyuan123456@yeah.net"
   - git add .
-  - git commit -m "Auto deploy by Travis-CI"
+  - git remote add origin master https://github.com/Nexus6pBar/Nexus6pBar.github.io.git
+  - git commit -m "$TRAVIS_BUILD_NUMBER deployed by Travis-CI"
   - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:master
 # E: Build LifeCycle
 
