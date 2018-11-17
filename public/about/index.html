@@ -426,14 +426,16 @@
 <hr>
 <h3 id="开始工作"><a href="#开始工作" class="headerlink" title="开始工作"></a>开始工作</h3><p>这个网站基于Hexo构建，而Hexo依赖Node.js环境。请在您的计算机上安装Node.js并参考相关教程将其加入环境变量。</p>
 <p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Download｜Node.js</a></p>
-<p>安装Hexo</p>
-<pre><code>$ npm install
-
+<p>下载项目并安装Hexo</p>
+<pre><code>$ git clone https://Nexus6pbar/Nexus6pBar.github.io.git -b source
+$ cd ./Nexus6pBar.github.io
+$ npm install
 </code></pre><p>使用下面这个命令对项目进行编译</p>
 <pre><code>$ hexo g
 </code></pre><p>要预览编译后的网站，请使用</p>
 <pre><code>$ hexo s
 </code></pre><p>这将在您的电脑上运行一个本地的HTTP服务器，默认端口为4000。也就是说，在浏览器中访问<a href="localhost:4000" target="_blank" rel="noopener">localhost:4000</a></p>
+<p>如果您拥有足够的权限，可以在修改后提交commit并push到source分支，Travis-CI将自动编译网站并发布。<strong>Hexo deploy已弃用</strong></p>
 <p>更多关于Hexo的使用帮助请参阅官方网站 <a href="http://hexo.io/zh-cn" target="_blank" rel="noopener">Hexo</a></p>
 <p>我们使用 <a href="https://github.com/viosey/hexo-theme-material" target="_blank" rel="noopener">Material</a> 主题。对于开发人员，此主题的更多帮助在 <a href="https://neko-dev.github.io/material-theme-docs/#/" target="_blank" rel="noopener">Material Theme</a></p>
 <hr>
