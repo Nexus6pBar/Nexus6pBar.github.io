@@ -4,6 +4,7 @@ categories:
   - software
 date: 2018-11-17 11:51:07
 tags:
+author: 神经元
 ---
 
 ### 1.关于Google Play服务
