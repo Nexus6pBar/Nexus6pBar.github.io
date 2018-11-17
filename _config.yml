@@ -39,8 +39,8 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
+  enable: false
+  line_number: flase
   auto_detect: false
   tab_replace:
   
@@ -75,9 +75,18 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: material
 
+Plugins:
+- hexo-generator-sitemap
+
+sitemap:
+    path: sitemap.xml
+
+search:
+    path:search.xml
+    field:all
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: https://github.com/Nexus6pBar/Nexus6pBar.github.io.git
-  branch: master
+#deploy:
+#  type: git
+#  repo: https://github.com/Nexus6pBar/Nexus6pBar.github.io.git
+#  branch: master

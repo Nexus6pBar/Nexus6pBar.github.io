@@ -123,7 +123,7 @@ qrcode:
 #    Prettify
 #        theme: # Available value in /source/css/prettify/[theme].min.css
 prettify:
-    enable: false
+    enable: true
     theme: "github-v2"
 
 #    Hanabi (https://github.com/egoist/hanabi)
@@ -273,14 +273,14 @@ comment:
 # Available value:
 #     swiftype | google | local
 search:
-    use: google
+    use: local
     swiftype_key:
 
 # Analytics Systems
 # Available value:
 #     baidu | google | cnzz
 analytics:
-    google_site_id:
+    google_site_id: UA-129278605-1 
     baidu_site_id:
     cnzz_site_id:
 
