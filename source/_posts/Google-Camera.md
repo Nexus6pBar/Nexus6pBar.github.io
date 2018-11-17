@@ -1,5 +1,5 @@
 ---
-title: Goole Camera
+title: Google Camera
 categories:
   - software
 date: 2018-11-17 11:51:07
@@ -34,7 +34,6 @@ tags:
 adb shell
 setprop persist.camera.HAL3.enabled 1
 setprop persist.camera.enable 1
-
 ```
 
 关于adb环境配置使用、USB调试。请参阅 [未完成]
