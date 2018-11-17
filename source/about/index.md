@@ -20,11 +20,12 @@ master分支：Hexo编译后的网站
 
 [Download｜Node.js](https://nodejs.org/en/download/)
 
-安装Hexo
+下载项目并安装Hexo
 
 ```
+$ git clone https://Nexus6pbar/Nexus6pBar.github.io.git -b source
+$ cd ./Nexus6pBar.github.io
 $ npm install
-
 ```
 
 使用下面这个命令对项目进行编译
@@ -40,6 +41,8 @@ $ hexo s
 ```
 
 这将在您的电脑上运行一个本地的HTTP服务器，默认端口为4000。也就是说，在浏览器中访问[localhost:4000](localhost:4000)
+
+如果您拥有足够的权限，可以在修改后提交commit并push到source分支，Travis-CI将自动编译网站并发布。**Hexo deploy已弃用**
 
 更多关于Hexo的使用帮助请参阅官方网站 [Hexo](http://hexo.io/zh-cn)
 
