@@ -4,9 +4,9 @@
 
 # Site
 title: Nexus6p
-subtitle:
-description:
-keywords:
+subtitle: 
+description: 这是一个由百度Nexus6P吧官方群部分dalao维护的关于Nexus6P的教程网站。
+keywords: Nexus6P
 author:
 language: zh-CN
 timezone:
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -90,3 +90,32 @@ search:
 #  type: git
 #  repo: https://github.com/Nexus6pBar/Nexus6pBar.github.io.git
 #  branch: master
+
+# 代码压缩 github.com/chenzhutian/hexo-all-minifier
+all_minifier: true 
+
+html_minifier: 
+  enable: true 
+  ignore_error: false 
+  exclude:
+  
+css_minifier: 
+  enable: true 
+  exclude: 
+    - '*.min.css' 
+
+js_minifier:
+  enable: true 
+  mangle: true 
+  output: 
+  compress: 
+  exclude: 
+    - '*.min.js'
+
+image_minifier: 
+  enable: true 
+  interlaced: true 
+  multipass: false 
+  optimizationLevel: 2 
+  pngquant: true
+  progressive: true
