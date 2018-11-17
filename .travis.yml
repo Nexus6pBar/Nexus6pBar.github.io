@@ -3,12 +3,14 @@ node_js: stable
 
 # S: Build Lifecycle
 install:
-  - npm install
+  - sudo apt-get update
+  - sudo apt-get install 
+  - npm install nasm -y
+  - npm install -g hexo-all-minifier
 
-
-before_script:
+#before_script:
  # - npm install -g gulp
-   - npm install -g hexo-all-minifier
+  
 
 script:
   - hexo clean
