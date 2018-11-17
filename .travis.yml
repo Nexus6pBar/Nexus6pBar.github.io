@@ -6,8 +6,9 @@ install:
   - npm install
 
 
-#before_script:
+before_script:
  # - npm install -g gulp
+   - npm install -g hexo-all-minifier
 
 script:
   - hexo clean
@@ -20,7 +21,7 @@ after_script:
   - git config user.email "liziyuan123456@yeah.net"
   - git add .
   - git remote add origin master https://github.com/Nexus6pBar/Nexus6pBar.github.io.git
-  - git commit -m "$TRAVIS_BUILD_NUMBER deployed by Travis-CI"
+  - git commit -m "#$TRAVIS_BUILD_NUMBER deployed by Travis-CI"
   - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:master
 # E: Build LifeCycle
 
