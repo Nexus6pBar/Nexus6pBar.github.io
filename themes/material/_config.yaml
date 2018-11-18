@@ -234,7 +234,7 @@ sidebar:
 # If you want to use gitment or gitalk,you should get the client_id and client_secret from https://github.com/settings/applications/new
 # If you want to use valine,you should get the app_id and app_key from https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
-    use: gitment
+    use: valine
     shortname: 
     changyan_appid:
     changyan_conf:
@@ -245,8 +245,8 @@ comment:
     gitment_owner: singleNeuron
     gitment_client_id: d95c55639ce9c2747a43 
     gitment_client_secret: 5f19b1041793e0f7bdcfa8a03f979c30ac3458f4
-    valine_leancloud_appId:  # leancloud application app id
-    valine_leancloud_appKey:  # leancloud application app key
+    valine_leancloud_appId: Lx0BEN7zxLgaN1GzqjR3OkyE-gzGzoHsz
+    valine_leancloud_appKey: w2OV7o4xFO41IHRrSYN4V1Ta
     valine_notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
     valine_verify: false # valine verify code (true/false)
     valine_pageSize: 10 # comment list page size
