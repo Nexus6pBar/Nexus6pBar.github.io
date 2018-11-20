@@ -37,7 +37,7 @@
                 <% if(post.author==null) { %>
                     <img src="<%= url_for(theme.img.avatar) %>" width="44px" height="44px" alt="<%= post.author %>'s avatar">
                 <% } else { %>
-                    <img src="/img/<%= post.author %>.jpg" width="44px" height="44px" alt="<%= post.author %>'s avatar">
+                    <img src="/img/<%= post.authot %>.jpg" width="44px" height="44px" alt="<%= post.author %>'s avatar">
                 <% } %>
             </div>
             <div>

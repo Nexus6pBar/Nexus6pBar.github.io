@@ -2,7 +2,11 @@
 
     <!-- Author Avatar -->
     <div id="author-avatar">
-        <img src="<%- url_for(theme.img.avatar) %>" width="44px" height="44px" alt="Author Avatar"/>
+        <% if(page.author==null) {%>
+          <img src="<%- url_for(theme.img.avatar) %>" width="44px" height="44px" alt="Author Avatar"/>
+        <% } else { %>
+            <img src="/img/<%= page.author %>.jpg" width="44px" height="44px" alt="Author Avatar"/>
+        <% } %>
     </div>
     <!-- Author Name & Date -->
     <div>
