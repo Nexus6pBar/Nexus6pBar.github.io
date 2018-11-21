@@ -110,7 +110,7 @@ adb shell settings put global captive_portal_mode 0
 adb shell settings get global captive_portal_mode
 ```
 
-* 服务器地址相关（同7.1.1）：  
+服务器地址相关（同7.1.1）：  
 ```
 //删除（删除默认用HTTPS）
 adb shell settings delete global captive_portal_https_url
