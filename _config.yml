@@ -81,6 +81,9 @@ Plugins:
 sitemap:
     path: sitemap.xml
 
+baidusitemap:
+    path: baidusitemap.xml
+
 search:
     path:search.xml
     field:all

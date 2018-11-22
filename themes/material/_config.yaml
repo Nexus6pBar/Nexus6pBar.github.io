@@ -10,7 +10,7 @@ head:
     keywords:
     site_verification:
         google: HNZSYtBq8kEyeigJikXnVJL_44MSkiNXve21Flcbw3Q
-        baidu:
+        baidu: 9HXEaQjyun
 
     # Enable generate structured-data as JSON+LD for SEO or not.
     #    Set as 'false' if it cause some wrong when `hexo g`.
@@ -281,7 +281,7 @@ search:
 #     baidu | google | cnzz
 analytics:
     google_site_id: UA-129278605-1 
-    baidu_site_id:
+    baidu_site_id: 922a16e32164341fb0d6d7a5572ef66c
     cnzz_site_id:
 
 # Leancloud Views
