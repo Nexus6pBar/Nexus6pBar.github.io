@@ -36,4 +36,4 @@ after_script:
 env:
  global:
    - GH_REF: github.com/Nexus6pBar/Nexus6pBar.github.io.git
-   - Coding_REF: git.coding.net/Neuron/Nexus6pBar.git
+   - Coding_REF: git.dev.tencent.com/Neuron/Nexus6pBar.git
