@@ -29,7 +29,7 @@ after_script:
   - git remote add origin https://github.com/Nexus6pBar/Nexus6pBar.github.io.git
   - git commit -m "#$TRAVIS_BUILD_NUMBER deployed by Travis-CI"
   - git push --force --quiet "https://${GH_Token}@${GH_REF}" master:master
-  - git push --force --quiet "https://${Coding_Token}@${Coding_REF}" master:master
+  - git push --force --quiet "https://Neuron:${Coding_Token}@${Coding_REF}" master:master
 # E: Build LifeCycle
 
 
