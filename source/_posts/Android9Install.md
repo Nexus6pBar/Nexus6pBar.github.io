@@ -13,27 +13,31 @@ Android 9.0通用安装教程
 
 **注意：安装之前务必退出谷歌账号**
 
-    准备文件:
+准备文件:
     
-    -   Rom卡刷包
+* Rom卡刷包
     
-    -   谷歌套件(GAPPS)
+* 谷歌套件(GAPPS)
     
-    -   Magisk卡刷包(用于ROOT)
+* Magisk卡刷包(用于ROOT)
     
-    -   platform-tools（使用方法参考heart大佬的教程）
+* platform-tools（使用方法参考heart大佬的教程）
     
-    -   确保已刷入第三方REC（参考heart大佬教程）
+* 确保已刷入第三方REC（参考heart大佬教程）
 
->   **注意:Pe,Aex需要刷入特定Rec**
+**注意:Pe,Aex需要刷入特定Rec**
 
->   下载地址: :https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg 提取码:n15n
+下载地址: :[百度云](https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg) 提取码:n15n
 
->   Recovery→recovery(special).img
+Recovery→recovery(special).img
 
 1.确保手机BL锁已解，并且打开OEM解锁和USB调试，并对计算机授权。
 
-2.使用platform-tools下的adb.exe，输入adb reboot Recovery
+2.使用platform-tools下的adb.exe，输入
+
+```bash
+adb reboot Recovery
+```
 
 {% asset_img enterRec.png 进入REC1 %}
 
