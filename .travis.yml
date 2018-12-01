@@ -15,6 +15,8 @@ install:
 script:
   - hexo clean
   - hexo g
+
+after_success:
   - cp ./404/404.html ./public
   - cp ./404/game.js ./public/js
   - cp ./404/game.css ./public/css
