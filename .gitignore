@@ -2,3 +2,4 @@ public
 .deoplay_git
 db.json
 *.bak
+.DS_Store
