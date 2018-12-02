@@ -65,7 +65,7 @@ author: HEART
 
 然后回车，手机上将会出现这个提示：
 
-{% asset_img 5.png %}
+{% asset_img 6.png %}
 
 音量键选择yes然后电源键确认，解锁完成。
 
