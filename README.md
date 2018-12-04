@@ -1,42 +1,15 @@
 # BaiduNexus6pBar.github.io  
 ![](https://travis-ci.org/Nexus6pBar/Nexus6pBar.github.io.svg?branch=source)
 
--------
+------
+
+[Nexus6p](nexus6p.cn)  
 
 这是一个由百度Nexus6P吧官方群部分dalao维护的关于Nexus6P的教程网站。  
-source分支：网站源码  
-master分支：Hexo编译后的网站  
- ** 警告：除非您完全清楚您正在做什么，否则您不应该直接手动修改master分支，该分支应由Hexo编译后自动更新。** 
+source：网站源码  
+master：Hexo编译后的网站  
+开发指南已迁移至wiki: [开发指南](https://github.com/Nexus6pBar/Nexus6pBar.github.io/wiki/%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97)
     
--------
-
-### 开始工作  
-这个网站基于Hexo构建，而Hexo依赖Node.js环境。请在您的计算机上安装Node.js并参考相关教程将其加入环境变量。  
-[Download｜Node.js](https://nodejs.org/en/download/)  
-
-下载项目并安装Hexo  
-```bash
-$ git clone https://Nexus6pbar/Nexus6pBar.github.io.git -b source
-$ cd ./Nexus6pBar.github.io
-$ npm install
-```
-
-使用下面这个命令对项目进行编译  
-```bash
-$ hexo g
-```
-
-要预览编译后的网站，请使用  
-```bash
-$ hexo s
-```  
-这将在您的电脑上运行一个本地的HTTP服务器，默认端口为4000。也就是说，在浏览器中访问[localhost:4000](localhost:4000)
-
-如果您拥有足够的权限，可以在修改后提交commit并push到source分支，Travis-CI将自动编译网站并发布。**Hexo deploy已弃用**
-
-更多关于Hexo的使用帮助请参阅官方网站 [Hexo](http://hexo.io/zh-cn)  
-我们使用 [Material](https://github.com/viosey/hexo-theme-material) 主题。对于开发人员，此主题的更多帮助在 [Material Theme](https://neko-dev.github.io/material-theme-docs/#/)
-
 -------
 
 ### 联系我们  
