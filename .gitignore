@@ -1,5 +1,8 @@
-public
-.deoplay_git
 db.json
 *.bak
 .DS_Store
+Thumbs.db
+*.log
+node_modules/
+public/
+.deploy*/
