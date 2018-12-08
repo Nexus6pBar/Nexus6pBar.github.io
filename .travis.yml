@@ -8,15 +8,12 @@ install:
   - npm install
   - npm install hexo-all-minifier --save
 
-before_script:
+script:
   - hexo clean
   - git clone https://github.com/Nexus6pBar/Nexus6pBar.github.io.git public -b master --depth=1 
   - cd public
   - git rm -rf .
   - cd ..
-  
-
-script:
   - hexo g
 
 after_success:
