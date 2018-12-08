@@ -1,7 +1,7 @@
 这是一个由百度Nexus6P吧官方群部分dalao维护的关于Nexus6P的教程网站。  
 source：网站源码  
 master：Hexo编译后的网站  
-开发指南已迁移至wiki: [开发指南](https://github.com/Nexus6pBar/Nexus6pBar.github.io/wiki/%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97)
+开发指南已迁移至wiki:[开发指南](https://github.com/Nexus6pBar/Nexus6pBar.github.io/wiki/%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97)
     
 ------
 

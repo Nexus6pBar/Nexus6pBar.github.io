@@ -29,9 +29,7 @@ after_success:
   - git remote add origin https://github.com/Nexus6pBar/Nexus6pBar.github.io.git
   - git commit -m "#$TRAVIS_BUILD_NUMBER deployed by Travis-CI"
   - git push --force "https://${GH_Token}@${GH_REF}" master:master
-  - git push --force "https://Neuron:${Coding_Token}@${Coding_REF}" master:master
-# E: Build LifeCycle
-
+#  - git push --force "https://Neuron:${Coding_Token}@${Coding_REF}" master:master
 
 env:
  global:
