@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[干掉淘宝&QQ自动WebView核心]]></title>
+    <url>%2Fport%2F%E8%BD%AF%E4%BB%B6%2F%E5%B9%B2%E6%8E%89%E6%B7%98%E5%AE%9D%26QQ%E8%87%AA%E5%B8%A6WebView%E6%A0%B8%E5%BF%83%2F</url>
+    <content type="text"><![CDATA[引言阿里系的应用因为其臃肿卡顿饱受诟病，究其症结，淘宝、支付宝、闲鱼等阿里系应用都大量应用了WebView提到WebView，其在安卓中的应用还是非常广泛的。提到阿里的WebView，就不得不提到UC，UC浏览器在塞班系统上表现无敌，然而在Android上表现平平，在加入阿里系之后完全跻身“毒瘤”行列。淘宝、闲鱼、支付宝为什么这么大？在查看data文件夹后不难发现它们都内置了一个30M的UC WebView组件，这个组件相对于目前主流手机的Android Webv（MIUI10系统WebView已经基于Chrome 62），表现是比较差的让这些软件直接调用系统WebView，能够降低RAM占用，同时提供更好的浏览体验操作以下操作需要获取Root权限淘宝UC核心路径/data/data/com.taobao.taobao/app_ucmsdk/updates/(数字)/(数字)/lib/libwebviewuc.so闲鱼UC核心路径/data/data/com.taobao.idlefish/app_ucmsdk/updates/(数字)/(数字)/lib/libwebviewuc.so以上两者直接删除30M的libwebviewuc.so既可支付宝UC核心路径/data/data/com.eg.android.AlipayGphone/app_h5container将该文件夹权限设置为000（去掉所有权限的勾），然后删除该文件夹下所有文件既可腾讯系应用对于腾讯系的应用（QQ\微信）其采用的是QQ浏览器X5内核，基于Chrome 57，如果你的手机WebView版本更高，可以考虑关闭X5内核在QQ/微信中访问 http://debugtbs.qq.com选择右下角禁用内核既可结语内核检测工具https://ie.icoa.cn/http://liulanmi.com/​禁用软件自带的WebView可能造成部分不兼容的问题，腾讯系重新打开X5内核、阿里重新覆盖安装一次既可]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[过Google账户锁]]></title>
     <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2Fpassgoogle%2F</url>
     <content type="text"><![CDATA[1.1 了解什么是Google锁如果在带有Google服务的ROM上登入了你的Google账户，然后再恢复出场设置或者刷带有Google服务的ROM，那么就会被Google锁住（账户锁），必须要连接网络才可以继续，然而在我大天朝，是不能正常访问Google服务的，所以很多机友在这个地方卡住。（本人也中招5次）1.2 电脑翻墙首先，你要有一台可以正常连接WIFI的电脑，和一个能正常上网的路由器，如果有，那么就开始电脑操作：第一步：下载SSR工具（Windows）下载后解压，解压后运行2.0或者4.0的应用程序，如图会弹出防火墙窗口，不要管它，点击允许访问。接着输入SSR账户信息（需要购买），或者右键客户端点击二维码扫描，(打开某个节点的二维码，让二维码显示在桌面中以便客户端能扫描得到)然后点确定。如无法扫码也可以复制SSR://链接，右键客户端的”剪贴板批量导入SSR://链接”来导入节点。 然后右键任务栏上的上的SSR图标弹出主菜单后找到”系统代理模式”把它勾选为PAC模式，”代理规则”勾选为”绕过局域网和大陆”，”选项设置”里面把”允许来自局域网的连接”勾上。 接着查看这台电脑的IP地址打开电脑的命令提示符，输入ipconfig，出现如下文字，然后记住IPv4地址电脑设置完成。1.2.1 手机设置在联网界面连上电脑已经连接的Wi-Fi，先不要急着输密码，点击下面的”高级选项”选择”代理”然后再选”手动”接着输入代理服务器主机名（输入刚才记下的IPv4地址），”代理端口”输入1080。1.3 完成设置完成后输入密码连接，然后慢慢等着输入账号吧。]]></content>
