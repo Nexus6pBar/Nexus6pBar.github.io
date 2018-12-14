@@ -1,5 +1,5 @@
 ---
-title: 干掉淘宝&QQ自动WebView核心
+title: 干掉淘宝和QQ自动WebView核心
 categories:
   - 软件
 date: 2018-12-09 11:21:35
