@@ -27,7 +27,7 @@ after_success:
   - git add .
   - git commit -m "#$TRAVIS_BUILD_NUMBER deployed by Travis-CI"
   - git push --force "https://${GH_Token}@${GH_REF}" master:master
-  - git push --force "https://Neuron:${Coding_Token}@${Coding_REF}" master:master
+#  - git push --force "https://Neuron:${Coding_Token}@${Coding_REF}" master:master
 
 env:
  global:
