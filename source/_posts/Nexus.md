@@ -29,7 +29,9 @@ author: HEART
 
 ###### 1.3.1配置platform tools
 
-首先你得下载platform tools工具包
+首先你得下载Platform tools工具包
+
+下载地址：[百度云](https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg) 提取码:n15n (PlatformTools)
 
 解压这个压缩包，解压后会有一个文件夹，点开后再点开里面的文件夹，然后就会看到这些：
 
@@ -56,6 +58,8 @@ author: HEART
 {% asset_img 9.png %}
 
 确定，这样adb的环境变量就配置好了，以后不要移到或删除这个文件夹。
+
+对于Linux及MacOS系统的用户，我们默认您已经或可以通过搜索引擎自行掌握了相关环境的配置，故省略。如有需要，请与站点管理员[联系](/about)
 
 ###### 1.3.2开始解锁
 

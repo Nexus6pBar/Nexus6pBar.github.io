@@ -3,6 +3,7 @@ title: Google Camera
 categories:
   - 软件
 date: 2018-11-17 11:51:07
+updated: 2019-01-10 23:40:00
 tags:
 author: 神经元
 ---
@@ -12,7 +13,7 @@ author: 神经元
   如果手机上没有 Google Play 服务，直接使用谷歌相机会造成闪退。想安装完整的Gapps，请参阅 [未完成]
 
 对于未解锁／不想安装Gapps的用户，可以通过安装microG来使用谷歌相机，在以下链接下载microG：  
-[tools/GoogleCamera/GCam-5.1.018-Pixel2Mod-Arnova8G2-V8.3b1.apk](https://github.com/Nexus6pBar/tools/blob/master/GoogleCamera/GCam-5.1.018-Pixel2Mod-Arnova8G2-V8.3b1.apk)  
+[百度云](https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg) 提取码:n15n （GoogleCamera/com.google.android.gms-13280012.apk）  
 或直接从官网下载 Services Core：[Download － microG Project](https://microg.org/download.html)
 
 
@@ -33,17 +34,21 @@ setprop persist.camera.enable 1
 
  - 对于已经安装了 Magisk 的用户，可以选择安装 Camera2API enable 而不用执行上述步骤，在以下链接下载:
 
-[tools/GoogleCamera/C2API_enabler_v1500.zip](https://github.com/Nexus6pBar/tools/blob/master/GoogleCamera/C2API_enabler_v1500.zip)    
+[百度云](https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg) 提取码:n15n （GoogleCamera/C2API_enabler_v1500.zip）   
 或直接从XDA下载： [[Module] Camera2APIenabler](https://forum.xda-developers.com/apps/magisk/module-camera2api-enabler-t3656651)    
 关于Magisk，请参阅 [未完成] 或XDA：[Magisk](https://forum.xda-developers.com/apps/magisk)
 
 ### 3.Google Camera    
 这个地址收集了几乎所有的谷歌相机修改版：[Google Camera Port](https://www.celsoazevedo.com/files/android/google-camera/)    
 
- 一般来说 Arnova 的修改版是最为推荐的，功能也比较齐全，可以通过以下链接下载：    
-[tools/GoogleCamera/GCam-5.1.018-Pixel2Mod-Arnova8G2-V8.3b1.apk](https://github.com/Nexus6pBar/tools/blob/master/GoogleCamera/GCam-5.1.018-Pixel2Mod-Arnova8G2-V8.3b1.apk)    
+ 一般来说 Arnova 的修改版是最为推荐的，功能也比较齐全：    
+[百度云](https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg) 提取码:n15n （GoogleCamera/GCam-5.1.018-Pixel2Mod-Arnova8G2-V8.3b1.apk）   
 [Google Camera Port: Arnova8G2 apks](https://www.celsoazevedo.com/files/android/google-camera/dev-arnova8G2/#apk411)
 
-对于某些特殊情况造成的不兼容，可以尝试 Charles_l 的Nexus6p专版：    
-[tools/GoogleCamera/camera_nx_v7.4_ZSL_chromloop.com.apk](https://github.com/Nexus6pBar/tools/blob/master/GoogleCamera/camera_nx_v7.4_ZSL_chromloop.com.apk)    
+新版本的Google相机增加了黑科技夜视仪，极大的提升了黑暗环境下的拍照效果。但日常使用尚不是特别稳定：
+[百度云](https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg) 提取码:n15n （GoogleCamera/MGC_6.1.021_V1.apk） 
+[Google Camera Port: BSG apks](https://f.celsoazevedo.com/file/gcamera/MGC_6.1.021_V1.apk)  
+
+对于某些极其罕见的特殊情况造成的不兼容，可以尝试 Charles_l 的Nexus6p专版：    
+[百度云](https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg) 提取码:n15n （GoogleCamera/camera_nx_v7.4_ZSL_chromloop.com.apk）   
 [Google Camera Port: Charles_l apks](https://www.celsoazevedo.com/files/android/google-camera/dev-charles/)  

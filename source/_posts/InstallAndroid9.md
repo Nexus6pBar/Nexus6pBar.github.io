@@ -24,9 +24,7 @@ author: Gospodaru
 
 请务必刷入最新支持FBE的Rec
 
-下载地址：[百度云](https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg) 提取码:n15n
-
-Recovery→recovery(special)→recovery.img
+下载地址：[百度云](https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg) 提取码:n15n (Recovery/recovery_FBE.img)
 
 1.确保手机BL锁已解，并且打开OEM解锁和USB调试，并对计算机授权。
 
