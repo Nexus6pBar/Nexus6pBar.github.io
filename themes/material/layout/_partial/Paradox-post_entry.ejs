@@ -41,7 +41,12 @@
                 <% } %>
             </div>
             <div>
-                <strong><%= post.author %></strong>
+                    <% if(post.author==null) { %>
+                        <strong>Administrator</strong>
+                    <% } else { %>
+                        <strong><%= post.author %></strong>
+                    <% } %>
+                
                 <span><%= date(post.date, 'MMM DD, YYYY') %></span>
             </div>
         </div>

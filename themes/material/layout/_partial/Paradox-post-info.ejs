@@ -10,7 +10,12 @@
     </div>
     <!-- Author Name & Date -->
     <div>
-        <strong><%= page.author %></strong>
+            <% if(page.author==null) {%>
+                <strong>Administrator</strong>
+              <% } else { %>
+                <strong><%= page.author %></strong>
+              <% } %>
+        
         <span><%= date(page.date, 'MMM DD, YYYY') %></span>
     </div>
 
