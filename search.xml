@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[怎么获取Nexus6p的root权限]]></title>
     <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2FRoot%2F</url>
-    <content type="text"><![CDATA[Root是Android手机的进阶玩法（即获取最高权限）教程分两块：1 Android6.0.0-7.1.2的用户1.下载SuperSU的卡刷包并放入手机内置储存的根目录2.线刷TWRP（已经刷入的忽略）3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP4.点击Install，找到并点击SuperSU的zip格式卡刷包5.滑动滑块刷入6.重启手机2 Android8.1.0-9.0.0的用户1.下载Magisk的卡刷包并放入手机内置储存根目录2.线刷TWRP（已经刷入的忽略）3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP4.点击Install，找到并点击Magisk的zip格式卡刷包5.滑动滑块刷入6.重启手机注意：Android9.0.0的用户如果刷入Magisk之后启动器里没有Magisk Mangler的话请去下载并安装]]></content>
+    <content type="text"><![CDATA[Root是Android手机的进阶玩法（即获取最高权限）教程分两块：1 Android6.0.0-7.1.2的用户1.下载SuperSU的卡刷包并放入手机内置储存的根目录2.线刷TWRP（已经刷入的忽略）3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP4.点击Install，找到并点击SuperSU的zip格式卡刷包5.滑动滑块刷入6.重启手机2 Android8.1.0-9.0.0的用户1.下载Magisk的卡刷包并放入手机内置储存根目录2.线刷TWRP（已经刷入的忽略）3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP4.点击Install，找到并点击Magisk的zip格式卡刷包5.滑动滑块刷入6.重启手机注意：Android9.0.0的用户如果刷入Magisk之后启动器里没有Magisk Manager的话请去下载并安装]]></content>
       <categories>
         <category>系统</category>
       </categories>
