@@ -24,4 +24,4 @@ Root是Android手机的进阶玩法（即获取最高权限）
 5.滑动滑块刷入
 6.重启手机
 
-*注意：Android9.0.0的用户如果刷入Magisk之后启动器里没有Magisk Mangler的话请去下载并安装*
+*注意：Android9.0.0的用户如果刷入Magisk之后启动器里没有Magisk Manager的话请去下载并安装*
