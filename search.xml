@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何跳过Google的开机向导]]></title>
+    <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2F%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87Google%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%91%E5%AF%BC%2F</url>
+    <content type="text"><![CDATA[如何跳gappsAndroid 手机在刷了 Gapps 之后，在开机进入系统时会进入 Gapps 的开机引导（也就是设置 Google 帐号神马的）。但是这需要连 Google 进行验证，于是……对于这种情况，可以通过以下方法解决：连 Google 进行验证断网顺时针点屏幕四角更改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED1. 连 Google 进行验证这个方法就不多说了，只要能连上 Google，就不会卡在这里了。至于怎么连 Google，请自行寻找科学上网的方法参考：https://nexus6p.cn/port/%E7%B3%BB%E7%BB%9F/passgoogle/2. 断网这个 Gapps 的开机引导是需要连网进行的，默认的情况下如果不连网的情况下是会自动跳过的。但是许多系统在默认情况下 Wifi 和数据是会自动打开，就算把卡取了，也还会有 Wifi，一样无法跳过。对此，可选择先不刷 Gapps，进入系统后将 Wifi 的数据关闭，再刷 Gapps，此方法有一定弊端，有可能会导致 Gapps 某些应用发生某些玄学问题…，比如闪退，未响应，停止运行等3. 顺时针点屏幕四角这可能是最玄学的一个方法了，据传连点屏幕四角就可跳过此引导（顺时针方向，从左上角开始）。但是！！！但是！！！这是看你运气的时刻，时灵时不灵。别问我是怎么知道的。 (╯‵□′)╯︵┻━┻4. 更改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED敲黑板！！！ 这是我所试过最科学的方法。在开机情况下，将手机连上电脑，使用 adb 工具来修改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED 的值。具体操作如下：打开命令行，输入命令：adb shell settings put secure user_setup_complete 1adb shell settings put global device_provisioned 1重启，搞定。注意：如果没有把adb.exe添加到环境变量的话输入上述命令会出现错误！！一般的类原生系统 ADB 默认是打开的，及时没有进入系统，依旧可以通过 ADB 设置，手机官方系统一般 ADB 默认关闭的注：在 WINDOWS 下，如果未将 adb.exe 文件所在路径添加至环境变量中，则需要在 adb.exe 文件所在目录下打开命令行，而后将上述命令中的 adb更改为./adb.exe。上述命令运行错误时会有提示，而成功则没有。5. 终极方法有twrp的话在TWRP里的终端输入dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp即可跳过PS：进入TWRP终端的方法请度娘。]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[怎么获取Nexus6p的root权限]]></title>
     <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2FRoot%2F</url>
     <content type="text"><![CDATA[Root是Android手机的进阶玩法（即获取最高权限）教程分两块：1 Android6.0.0-7.1.2的用户1.下载SuperSU的卡刷包并放入手机内置储存的根目录2.线刷TWRP（已经刷入的忽略）3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP4.点击Install，找到并点击SuperSU的zip格式卡刷包5.滑动滑块刷入6.重启手机2 Android8.1.0-9.0.0的用户1.下载Magisk的卡刷包并放入手机内置储存根目录2.线刷TWRP（已经刷入的忽略）3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP4.点击Install，找到并点击Magisk的zip格式卡刷包5.滑动滑块刷入6.重启手机注意：Android9.0.0的用户如果刷入Magisk之后启动器里没有Magisk Manager的话请去下载并安装]]></content>
