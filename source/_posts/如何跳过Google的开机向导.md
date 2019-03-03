@@ -38,8 +38,11 @@ Android 手机在刷了 Gapps 之后，在开机进入系统时会进入 Gapps �
 
 打开命令行，输入命令：
 
-> adb shell settings put secure user_setup_complete 1
-> adb shell settings put global device_provisioned 1
+```bash
+adb shell settings put secure user_setup_complete 1
+adb shell settings put global device_provisioned 1
+```
+
 重启，搞定。
 
 *注意：如果没有把adb.exe添加到环境变量的话输入上述命令会出现错误！！*
@@ -52,7 +55,10 @@ Android 手机在刷了 Gapps 之后，在开机进入系统时会进入 Gapps �
 
 ## 5. 终极方法
 
-有twrp的话在TWRP里的终端输入dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp
+有twrp的话在TWRP里的终端输入
+```bash
+dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp
+```
 即可跳过
 
 PS：进入TWRP终端的方法请度娘。
