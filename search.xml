@@ -43,7 +43,7 @@
   <entry>
     <title><![CDATA[如何强制4G]]></title>
     <url>%2Fport%2FFAQ%2Fforcelte%2F</url>
-    <content type="text"><![CDATA[Q：如何强制使用LTEA：打开手机拨号界面，输入*#*#4636#*#* 在弹出的界面中选择手机信息，将首选网络类型设置为 LTE Only如果您的所在地区没有4G信号或您的手机不支持当地频段，此改动可能导致您的手机没有信号。如果出现此情况，请改回默认设置。默认3G网络制式：移动3G：TD-SCDMA联通：WCDMA电信：CDMA]]></content>
+    <content type="text"><![CDATA[Q：如何强制使用LTEA：打开手机拨号界面，输入*#*#4636#*#* 在弹出的界面中选择手机信息，将首选网络类型设置为 LTE Only如果您的所在地区没有4G信号或您的手机不支持当地频段，此改动可能导致您的手机没有信号。如果出现此情况，请改回默认设置。如果您所在地区不支持VoLTE，此改动将导致您无法接听及拨打电话默认3G网络制式：移动3G：TD-SCDMA联通：WCDMA电信：CDMA]]></content>
       <categories>
         <category>FAQ</category>
       </categories>
