@@ -15,8 +15,6 @@ script:
   - git rm -rf .
   - cd ..
   - hexo g
-
-after_success:
   - cp ./404/404.html ./public
   - cp ./404/game.js ./public/js
   - cp ./404/game.css ./public/css
@@ -28,8 +26,9 @@ deploy:
   github_token: ${GH_Token}
   keep_history: true
   local_dir: ./public
+  target_branch: master
   on:
-    branch: master
+    branch: source
 
 env:
  global:
