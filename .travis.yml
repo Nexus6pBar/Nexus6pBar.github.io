@@ -21,13 +21,15 @@ after_success:
   - cp ./404/game.js ./public/js
   - cp ./404/game.css ./public/css
   - cp -r ./404/assets ./public
-  - cd ./public
-  - git config user.name "Travis-CI Auto Deploy"
-  - git config user.email "liziyuan123456@yeah.net"
-  - git add .
-  - git commit -m "#$TRAVIS_BUILD_NUMBER deployed by Travis-CI"
-  - git push --force "https://${GH_Token}@${GH_REF}" master:master
-#  - git push --force "https://Neuron:${Coding_Token}@${Coding_REF}" master:master
+  
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: ${GH_Token}
+  keep_history: true
+  local_dir: ./public
+  on:
+    branch: master
 
 env:
  global:
