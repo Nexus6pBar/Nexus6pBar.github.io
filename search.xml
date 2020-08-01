@@ -1,120 +1,717 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[老司机带你优化Nexus 6p]]></title>
-    <url>%2Fport%2F%E8%BD%AF%E4%BB%B6%2F%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p%2F</url>
-    <content type="text"><![CDATA[系统优化 看到群里面很多人说手机卡，发热，但又不能每次都在线一部部的交吧，故写篇教材 优化前提首先你要有root，这里推荐使用Magisk，因为稍候会用到一些模块（如果不会刷入的可以看我们上一篇教程）优化1（刷入模块,记得刷入后重启哦😝）首先我们先刷入调度模块viper调度百度云 提取码:n15n （优化教程/viper调度（酷安ID：TSU守望者）.zip）群里还有很多人使用gapps的，耗电高怎么办没问题，使用模块让它乖乖打盹这里推荐 Universal GMS Doze百度云 提取码:n15n （优化教程/Universal_GMS_Doze-v1.6.1_(LST01F,_Mar_2019).zip）这里使用Magisk刷入，当然你也可以用rec刷入（下面是刷入方法）先打开面具🎭，如图然后滑出侧栏，如图再点击模块，如图再点击加号，找到要刷入的模块，点击模块，就会看到如图，这里是以viper调度为例最后点击关闭刷入其他模块，或者点击重启就大功告成了优化2使用黑域这里推荐群里面的版本百度云 提取码:n15n （优化教程/黑域_3.0.7.apk） 进入黑域后首先会看到这个画面不用管，直接滑动到使用，授予root权限即可下面就是如何设置黑域了（这可能是最详细的黑域使用教程）先点击右上角三个点然后按图片将设置里面的开关打开或关掉然后回到黑域主界面先随便点一个图标（记住是图标，不是文字）然后点击反选会显示如图接着把反选之后没有选择的图标点一下，会显示如图再点击如果你不想让黑域杀掉一些应用，想使他长驻后台可以加入白名单如图所示黑域还有一个冻结的功能，冻结你不常使用的功能有了它你不用再装冰箱，小黑屋等冻结软件，可以说是非常强大了点击需要冻结的app，这次就不要点图标，要点图标以外的地方，然后选择冻结就行了，如图黑域还有一个很特殊的功能，就是无需电脑使用adb命令只沉浸状态栏：adb shell settings put global policy_control immersive.status=* 只沉浸导航栏：adb shell settings put global policy_control immersive.navigation=* 沉浸导航栏和状态栏：adb shell settings put global policy_control immersive.full=* 恢复官方默认：adb shell settings put global policy_control null 单独控制某一个app不沉浸，比如以下代码设定google实时界面不沉浸，其他程序沉浸：adb shell setting put global policy_control immersive.navigation=apps,-ch.deletescape.lawnchair.ci 例如这些指令，使用前删掉adb shell就可以使用黑域使用了settings put global policy_control immersive.navigation=apps,-ch.deletescape.lawnchair.ci,-com.google.android.GoogleCamera,-com.google.android.inputmethod.latin 好了黑域教程到此为止了优化3 你还在怕app窃取你的隐私吗？关了权限无法打开app的情况吗？还怕毒瘤软件在后台长期运行，导致手机卡卡的吗？有了它你就就不必担心，它就是神器 App ops，一款系统给了权限，但只要它不给权限照样无法读取你的权限的管理应用，麻麻再也不用担心隐私泄露了使用方法系统里面给应用权限，app ops拒绝权限这样应用就无法使用该权限了有人要问了，我需要这个权限，但只想在使用的时候用到它，而不想让它在后台使用该怎么办？没问题，app ops加入了这个解决方案以淘宝为例选择前台时允许就可以完美解决这个问题，如图所示在使用安卓9.0的时候我们还可以用appops可以加以限制后台，让毒瘤无法在后台肆无忌惮运行，压死毒瘤同样以淘宝为例子滑到权限最下面，点击在后台运行，选择严格限制，如图所示]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[如何跳过Google的开机向导]]></title>
-    <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2F%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87Google%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%91%E5%AF%BC%2F</url>
-    <content type="text"><![CDATA[如何跳gappsAndroid 手机在刷了 Gapps 之后，在开机进入系统时会进入 Gapps 的开机引导（也就是设置 Google 帐号神马的）。但是这需要连 Google 进行验证，于是……对于这种情况，可以通过以下方法解决：连 Google 进行验证断网顺时针点屏幕四角更改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED1. 连 Google 进行验证这个方法就不多说了，只要能连上 Google，就不会卡在这里了。至于怎么连 Google，请自行寻找科学上网的方法参考：https://nexus6p.cn/port/%E7%B3%BB%E7%BB%9F/passgoogle/2. 断网这个 Gapps 的开机引导是需要连网进行的，默认的情况下如果不连网的情况下是会自动跳过的。但是许多系统在默认情况下 Wifi 和数据是会自动打开，就算把卡取了，也还会有 Wifi，一样无法跳过。对此，可选择先不刷 Gapps，进入系统后将 Wifi 的数据关闭，再刷 Gapps，此方法有一定弊端，有可能会导致 Gapps 某些应用发生某些玄学问题…，比如闪退，未响应，停止运行等3. 顺时针点屏幕四角这可能是最玄学的一个方法了，据传连点屏幕四角就可跳过此引导（顺时针方向，从左上角开始）。但是！！！但是！！！这是看你运气的时刻，时灵时不灵。别问我是怎么知道的。 (╯‵□′)╯︵┻━┻4. 更改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED敲黑板！！！ 这是我所试过最科学的方法。在开机情况下，将手机连上电脑，使用 adb 工具来修改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED 的值。具体操作如下：打开命令行，输入命令：adb shell settings put secure user_setup_complete 1 adb shell settings put global device_provisioned 1 重启，搞定。注意：如果没有把adb.exe添加到环境变量的话输入上述命令会出现错误！！一般的类原生系统 ADB 默认是打开的，及时没有进入系统，依旧可以通过 ADB 设置，手机官方系统一般 ADB 默认关闭的注：在 WINDOWS 下，如果未将 adb.exe 文件所在路径添加至环境变量中，则需要在 adb.exe 文件所在目录下打开命令行，而后将上述命令中的 adb更改为./adb.exe。上述命令运行错误时会有提示，而成功则没有。5. 终极方法有twrp的话在TWRP里的终端输入dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp 即可跳过PS：进入TWRP终端的方法请度娘。]]></content>
-      <categories>
-        <category>系统</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[怎么获取Nexus6p的root权限]]></title>
-    <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2FRoot%2F</url>
-    <content type="text"><![CDATA[Root是Android手机的进阶玩法（即获取最高权限）教程分两块：1 Android6.0.0-7.1.2的用户1.下载SuperSU的卡刷包并放入手机内置储存的根目录2.线刷TWRP（已经刷入的忽略）3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP4.点击Install，找到并点击SuperSU的zip格式卡刷包5.滑动滑块刷入6.重启手机2 Android8.1.0-9.0.0的用户1.下载Magisk的卡刷包并放入手机内置储存根目录2.线刷TWRP（已经刷入的忽略）3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP4.点击Install，找到并点击Magisk的zip格式卡刷包5.滑动滑块刷入6.重启手机注意：Android9.0.0的用户如果刷入Magisk之后启动器里没有Magisk Manager的话请去下载并安装]]></content>
-      <categories>
-        <category>系统</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[Google Nexus 6p刷机资源及工具 伸手党福利]]></title>
-    <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2Fdownload%2F</url>
-    <content type="text"><![CDATA[关于无限重启的办法：https://forum.xda-developers.com/nexus-6p/general/guide-fix-nexus-6p-bootloop-death-blod-t3640279官方固件(中国站)：https://developers.google.cn/android/images?hl=zh-cn#angler工具adb:https://dl.google.com/android/repository/platform-tools_r28.0.1-windows.zipadb for mac:https://dl.google.com/android/repository/platform-tools_r28.0.1-darwin.zipadb for Linux：https://dl.google.com/android/repository/platform-tools_r28.0.1-linux.zip百度网盘：https://pan.baidu.com/s/1x6eBWoPJbMWakHncRdzCPg 提取码：grzrtwrp：https://twrp.me/huawei/huaweinexus6p.htmlMagisk稳定版：https://github.com/topjohnwu/Magisk/releases/download/v17.1/Magisk-v17.1.zipMagisk测试（Beta）版：https://github.com/topjohnwu/Magisk/releases/download/v17.3/Magisk-v17.3.zipxp框架：http://dl-xda.xposed.info/framework/google卡刷包 https://opengapps.org/内核FrancoKernel:https://kernels.franco-lnx.net/Nexus6P/8.1.0/anyKernel/作者xda的帖子:https://forum.xda-developers.com/nexus-6p/orig-development/kernel-franco-kernel-r1-t3266864ElementalX(推荐使用):https://elementalx.org/devices/nexus-6p/作者xda的帖子:https://forum.xda-developers.com/nexus-6p/orig-development/kernel-elementalx-n6p-t32405716.0.1rommiui 8:https://androidfilehost.com/?w=files&amp;flid=187831作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-miui-8-nexus-6p-t36178297.1.2romPure Nexus:https://androidfilehost.com/?fid=745425885120751463https://goo.gl/TMclDf作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-pure-nexus-layers-fi-wifi-calling-t3244563CarbonROM:http://get.carbonrom.org/device-angler.html作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/7-x-x-carbonrom-cr-5-1-t35302818.1.0romLineageOS:https://download.lineageos.org/angler清华大学源:https://mirrors.tuna.tsinghua.edu.cn/lineage-rom/full/angler/中科大源:http://mirrors.ustc.edu.cn/lineageos/full/anglerABC ROM 8.1.0:https://kantjer.com/作者xda的帖子:https://forum.xda-developers.com/custom-roms/android-builders-collective/rom-builders-collective-t2861778ResurrectionRemix Oreo:https://sourceforge.net/projects/resurrectionremix-oreo/files/angler/作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-resurrection-remix-os-6-0-0-t3753578Havoc-OS：https://sourceforge.net/projects/havoc-os/files/angler/作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/havoc-os-nexus-6p-angler-t3830118crDroid：https://sourceforge.net/projects/crdroid/files/angler/crdroid-o/作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-crdroid-android-t3723622AICP 13.1:https://dwnld.aicp-rom.com/作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-aicp-13-o8-0-xrxx-official-nightlies-t3683688AquariOS:https://androidfilehost.com/?w=files&amp;flid=196672作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-aquarios-8-1-0-theming-live-support-t3768302CarbonROM:https://get.carbonrom.org/device-angler.html作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/8-1-x-carbonrom-cr-6-1-t3773838NitrogenOSO:https://androidfilehost.com/?w=files&amp;flid=237033作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-oms-nitrogen-os-o-26-12-2017-t37258879.0.0romAOSP:https://www.androidfilehost.com/?fid=1322778262904021086作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-aosp-t3843647Statixos:https://mega.nz/#F!NroGlaSY!MWu7V7WLfoTUQyCeUMK-_A作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-statixos-t3832438(bootloop用户可正常刷入这个rom包，详细方法请进入xda帖子↑)PixelExperience官方:https://download.pixelexperience.org/angler/作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-pixelexperience-t3869744AICP14.0非官方:https://basketbuild.com/devs/semdoc/angler-pie因为我不知道aicp14.0是不是跟aicp13.1同一个作者开发出来的包，所以作者xda的帖子暂时没有AOSiP:https://androidfilehost.com/?fid=11410963190603870695作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-unofficial-aosip-pie-beta-t3877510AospExtended ROM V6.0：https://downloads.aospextended.com/angler作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-aospextended-rom-v6-0-t3873592crDroid for Piehttps://sourceforge.net/projects/crdroid/files/angler/crdroid-p/作者xda的帖子:https://forum.xda-developers.com/nexus-6p/development/rom-crdroid-android-t3882528]]></content>
-      <categories>
-        <category>系统</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[图形化刷机助手——秋之盒]]></title>
-    <url>%2Fport%2F%E5%88%B7%E6%9C%BA%2FAutumnBox%2F</url>
-    <content type="text"><![CDATA[秋之盒——图形化刷机助手官网：www.atmb.top]]></content>
-      <categories>
-        <category>刷机</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[如何强制4G]]></title>
-    <url>%2Fport%2FFAQ%2Fforcelte%2F</url>
-    <content type="text"><![CDATA[Q：如何强制使用LTEA：打开手机拨号界面，输入*#*#4636#*#* 在弹出的界面中选择手机信息，将首选网络类型设置为 LTE Only如果您的所在地区没有4G信号或您的手机不支持当地频段，此改动可能导致您的手机没有信号。如果出现此情况，请改回默认设置。如果您所在地区不支持VoLTE，此改动将导致您无法接听及拨打电话默认3G网络制式：移动3G：TD-SCDMA联通：WCDMA电信：CDMA]]></content>
+    <title>About LineageOS official</title>
+    <url>/port/FAQ/About-LineageOS-official/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h6 id="Q"><a href="#Q" class="headerlink" title="Q:"></a>Q:</h6><p>LineageOS 16 official 为什么还不更新？</p>
+<h6 id="A"><a href="#A" class="headerlink" title="A:"></a>A:</h6><p>来自IssacChen的消息：angler的官方维护者跑路了。  </p>
+<img src="/port/FAQ/About-LineageOS-official/chen.jpg" class="">]]></content>
       <categories>
         <category>FAQ</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[干掉淘宝和QQ自动WebView核心]]></title>
-    <url>%2Fport%2F%E8%BD%AF%E4%BB%B6%2F%E5%B9%B2%E6%8E%89%E6%B7%98%E5%AE%9D%E5%92%8CQQ%E8%87%AA%E5%B8%A6WebView%E6%A0%B8%E5%BF%83%2F</url>
-    <content type="text"><![CDATA[引言阿里系的应用因为其臃肿卡顿饱受诟病，究其症结，淘宝、支付宝、闲鱼等阿里系应用都大量应用了WebView提到WebView，其在安卓中的应用还是非常广泛的。提到阿里的WebView，就不得不提到UC，UC浏览器在塞班系统上表现无敌，然而在Android上表现平平，在加入阿里系之后完全跻身“毒瘤”行列。淘宝、闲鱼、支付宝为什么这么大？在查看data文件夹后不难发现它们都内置了一个30M的UC WebView组件，这个组件相对于目前主流手机的Android Webv（MIUI10系统WebView已经基于Chrome 62），表现是比较差的让这些软件直接调用系统WebView，能够降低RAM占用，同时提供更好的浏览体验操作以下操作需要获取Root权限淘宝UC核心路径/data/data/com.taobao.taobao/app_ucmsdk/updates/(数字)/(数字)/lib/libwebviewuc.so闲鱼UC核心路径/data/data/com.taobao.idlefish/app_ucmsdk/updates/(数字)/(数字)/lib/libwebviewuc.so以上两者直接删除30M的libwebviewuc.so既可支付宝UC核心路径/data/data/com.eg.android.AlipayGphone/app_h5container将该文件夹权限设置为000（去掉所有权限的勾），然后删除该文件夹下所有文件既可腾讯系应用对于腾讯系的应用（QQ\微信）其采用的是QQ浏览器X5内核，基于Chrome 57，如果你的手机WebView版本更高，可以考虑关闭X5内核在QQ/微信中访问 http://debugtbs.qq.com选择右下角禁用内核既可结语内核检测工具https://ie.icoa.cn/http://liulanmi.com/​禁用软件自带的WebView可能造成部分不兼容的问题，腾讯系重新打开X5内核、阿里重新覆盖安装一次既可]]></content>
-      <categories>
-        <category>软件</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[过Google账户锁]]></title>
-    <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2Fpassgoogle%2F</url>
-    <content type="text"><![CDATA[1.1 了解什么是Google锁如果在带有Google服务的ROM上登入了你的Google账户，然后再恢复出场设置或者刷带有Google服务的ROM，那么就会被Google锁住（账户锁），必须要连接网络才可以继续，然而在我大天朝，是不能正常访问Google服务的，所以很多机友在这个地方卡住。（本人也中招5次）1.2 电脑翻墙首先，你要有一台可以正常连接WIFI的电脑，和一个能正常上网的路由器，如果有，那么就开始电脑操作：第一步：下载SSR工具（Windows）下载后解压，解压后运行2.0或者4.0的应用程序，如图会弹出防火墙窗口，不要管它，点击允许访问。接着输入SSR账户信息（需要购买），或者右键客户端点击二维码扫描，(打开某个节点的二维码，让二维码显示在桌面中以便客户端能扫描得到)然后点确定。如无法扫码也可以复制SSR://链接，右键客户端的”剪贴板批量导入SSR://链接”来导入节点。 然后右键任务栏上的上的SSR图标弹出主菜单后找到”系统代理模式”把它勾选为PAC模式，”代理规则”勾选为”绕过局域网和大陆”，”选项设置”里面把”允许来自局域网的连接”勾上。 接着查看这台电脑的IP地址打开电脑的命令提示符，输入ipconfig，出现如下文字，然后记住IPv4地址电脑设置完成。1.2.1 手机设置在联网界面连上电脑已经连接的Wi-Fi，先不要急着输密码，点击下面的”高级选项”选择”代理”然后再选”手动”接着输入代理服务器主机名（输入刚才记下的IPv4地址），”代理端口”输入1080。1.3 完成设置完成后输入密码连接，然后慢慢等着输入账号吧。]]></content>
-      <categories>
-        <category>系统</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[Android 9.0 通用安装教程]]></title>
-    <url>%2Fport%2F%E5%88%B7%E6%9C%BA%2FInstallAndroid9%2F</url>
-    <content type="text"><![CDATA[注意：安装之前务必退出谷歌账号准备文件:Rom卡刷包（这里以Pe为例）谷歌套件(GAPPS)Magisk卡刷包(用于ROOT)platform-tools（使用方法参考heart大佬的教程）Rec文件请务必刷入最新支持FBE的Rec下载地址：百度云 提取码:n15n (Recovery/recovery_FBE.img)1.确保手机BL锁已解，并且打开OEM解锁和USB调试，并对计算机授权。2.进入BL模式，手机关机，然后按住电源键与音量-键进入BL模式。将recovery拖入platform-tools下的文件夹，使用platform-tools下的adb.exe(按住Shift右击文件夹空白处,单击在此打开命令窗口)。输入fastboot flash recovery recovery.img 回车 3.按两下音量- ，再按一次电源键选中Recovery mode。 4.点击Wipe，然后点击Format Data,输入yes确认 5.完成后返回Rec主菜单，点击Reboot → Recovery → 滑动以确认。 6.重启再点击 Wipe → Advanced Wipe → 全部选上 → 滑动滑块以确定，完成后返回Wipe菜单 7.重启后来到菜单，单击 Mout，选中一下几个，然后返回菜单8.将Rom卡刷包 PixelExperience_angler-9.0-20181205-1457-OFFICIAL，Makisk卡刷包 Magisk-v17.2拖入手机存储中的TWRP文件夹9.单击Install,先选中Rom卡刷包PixelExperience_angler-9.0-20181205-1457-OFFICIAL，然后点击Add more Zips选中Magisk卡刷包，滑动确定开始刷入。 10.完成，重启等待即可]]></content>
+    <title>图形化刷机助手——秋之盒</title>
+    <url>/port/%E5%88%B7%E6%9C%BA/AutumnBox/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="秋之盒——图形化刷机助手"><a href="#秋之盒——图形化刷机助手" class="headerlink" title="秋之盒——图形化刷机助手"></a>秋之盒——图形化刷机助手</h3><p>官网：<a href="http://www.atmb.top/">www.atmb.top</a></p>
+<img src="/port/%E5%88%B7%E6%9C%BA/AutumnBox/1.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/AutumnBox/2.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/AutumnBox/3.png" class="">]]></content>
       <categories>
         <category>刷机</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Magisk 模块分享]]></title>
-    <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2FMagisk%2F</url>
-    <content type="text"><![CDATA[本文章全部模块可在 百度云 提取码:n15n 的 Magsik 文件夹中下载Android O APT-X libraries在Oreo和Pie上开启蓝牙对APT-X协议的支持XDAAOSP Volume Steps Increase将音量调节级别提高至30XDABusybox for Android NDKBusybox，这个没啥好说的。但是已知bug是这个模块会干扰Magsik Hide的运行，使添加到其中的所有App闪退。（Google Play服务会自动被添加到Magisk Hide中）XDACamera2 API EnablerCamera2 API，主要是为了让Google相机可以正常运行。XDADolby Digital Plus®为Oreo和Pie安装杜比全景声音效。XDAGlobal Optimized GPS File ReplacerGPS玄学优化。XDAGPU Turbo BoostGPU玄学优化，号称加速75%省电25%，不过心理安慰作用可能更大一些。XDAGreenify4Magisk给绿色守护开启系统集成的特权模式。XDALawnstep须配合Lawnchair使用，在Pie上开启Pie风格的上滑最近任务栏和导航栏手势。GithubMagisk Manager for Recovery Mode (mm)救砖神器，可以在TWRP中管理Magisk模块。通过在终端中输入以下命令来启动。/data/media/mmXDAMagisk SELinux Manager用Magisk切换SELinux状态，不用每次开机改了。XDAMagisKHide Props Config通过更改设备指纹来帮助设备通过SafetyNet检查。XDARiru - Core让 Riru 模块们进入应用进程或系统服务进程并执行他们的代码，目前用途见下文。GithubRiru - Location Report Enabler启用Google位置报告，必须安装Riru - Core。GithubSetting summary text file修复 当语言为中文时，所有基于AOSP的ROM的设置的高级显示异常 的问题。Single User Mod禁用多用户功能并删除来宾账户。XDAsleek+筑紫字体 for N+本文作者制作，在Nougat以上的系统中替换字体为sleek+筑紫。酷安Wifi Bonding (Qualcomm)在高通设备上以40MHz的运行的2.4GHz / 5.0GHz的无线网络连接，其实我也不知道具体有啥用，反正安了没坏处Github]]></content>
-      <categories>
-        <category>系统</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[身为小白你必须会的知识:从解锁到刷机]]></title>
-    <url>%2Fport%2F%E5%88%B7%E6%9C%BA%2FNexus%2F</url>
-    <content type="text"><![CDATA[1.1 解锁在Nexus6P遇到各种问题，卡在开机界面无法进入系统，也就是变砖，这时可以进入bootloader进行刷机来救砖，但进入bootloader操作的前提是要解锁，而从Nexus6开始，Google加入了OEM锁来管住bootloader锁，所以要先解OEM锁，再解bootloader锁。1.2 解OEM锁解OEM锁也是非常简单的，只要打开开发者选项（在设置-系统-关于手机里面狂点版本号，如图：系统会提示你 您已处于开发者模式 ），然后在开发者选项找到OEM解锁，如图：这样OEM锁就解锁完成。1.3 解bootloader锁解好OEM锁后把手机关机，长按音量-和电源键，手机会出现一个倒地的机器人，这时你已经进入bootloader模式，接下来用数据线连接电脑，然后开始电脑操作。1.3.1配置platform tools首先你得下载Platform tools工具包下载地址：百度云 提取码:n15n (PlatformTools)解压这个压缩包，解压后会有一个文件夹，点开后再点开里面的文件夹，然后就会看到这些：接着开始配置环境变量，首先右键计算机（此电脑）然后点击属性，在这个窗口找到高级系统设置接着找到环境变量复制platform tools的文件夹目录选择Path，点击编辑，再新建一个变量粘贴刚才复制的文件地址确定，这样adb的环境变量就配置好了，以后不要移到或删除这个文件夹。对于Linux及MacOS系统的用户，我们默认您已经或可以通过搜索引擎自行掌握了相关环境的配置，故省略。如有需要，请与站点管理员联系1.3.2开始解锁打开Windows命令提示符，在打开命令窗口之后，在窗口里输入：fastboot flashing unlock 然后回车，手机上将会出现这个提示：音量键选择yes然后电源键确认，解锁完成。注意：解锁会清除手机所有的数据，请及时备份和退出Google账户2.1 线刷官方包解锁成功后，如果不是硬件上的损坏，都可以利用线刷官方包来解决，首先手机进入bootloader电脑下载官方包，链接：官方包方法一：下载合适的版本之后解压，解压完成后打开文件夹，有以下文件：继续解压里面的压缩包，如图：移动文件夹里的文件到上一个目录双击里面的flash-all.bat，接着开始自动线刷，期间不要移动手机，电脑的命令窗口也不要乱动。方法二：如果按照方法一的教程出现报错，那么可以试试方法二，首先在刷机包文件夹里按shift+鼠标右键，选择在此处打开PowerShell（命令窗口）如图：打开后在命令窗口输入（输入后回车）：fastboot flash bootloader bootloader-angler-angler-03.81.img //不同的刷机包文件名不同) fastboot reboot bootloader fastboot flash radio radio-angler-angler-03.88.img //不同的刷机包文件名不同 fastboot flash boot boot.img fastboot flash recovery recovery.img fastboot flash system system.img fastboot flash vendor vendor.img fastboot reboot 线刷完成后手机会重启2.2 安装手机驱动如果手机连接电脑执行命令出现这样的提示：在检查好手机是否已经正确用数据线连接电脑并且进入bootloader模式后，如果还出现上述情况，那么就是驱动未正确安装，所以要安装手机驱动。下载手机驱动解压到电脑（最好是你可以记住的位置）右键此电脑（计算机），点击属性-设备管理器 4.找到设备，一般是：nexus6p，Android Device，bootloader等等右键设备，选择更新驱动程序-浏览我的计算机以查找驱动程序 然后找到你刚才下载并解压后的文件夹，点击安装。3.1 卡刷（此教程用到的rom是：Resurrect Remix OS 6.1）卡刷是把ROM存放在手机里，进入recovery模式进行刷机，recovery模式就是手机的恢复模式（相当于电脑的WindowsPE），首先刷入第三方的recovery，比如twrp（TeamWin Recovery Project）：进入bootloader，然后电脑下载文件，打开命令提示符，输入：fastboot flash recovery 把下载好的文件拖入命令窗口后回车，如图：手机bootloader按音量键出现RecoveryMod时按电源键进入recovery模式（注意：不能重启进入官方rom，不然会恢复成官方recovery，twrp等于白刷。）然后会出现一个界面，直接滑动就好。滑动之后就是twrp的主界面了，接着在手机上点击wipe（清除），选择这几个选项（俗称4清）然后把手机连接电脑，电脑出现手机的内部储存共享空间后把卡刷包复制进去，退回到主界面，点击install（安装），找到刚才的卡刷包，点击后滑动，开始刷入，开始等待。]]></content>
-      <categories>
-        <category>刷机</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[[转] 原生安卓WiFi信号去叹号去叉教程5.0-Android P]]></title>
-    <url>%2Fport%2F%E7%B3%BB%E7%BB%9F%2F%E8%BD%AC-%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93WiFi%E4%BF%A1%E5%8F%B7%E5%8E%BB%E5%8F%B9%E5%8F%B7%E5%8E%BB%E5%8F%89%E6%95%99%E7%A8%8B5-0-Android-P%2F</url>
-    <content type="text"><![CDATA[本文转载自 evil42.com ，已获得原作者授权。文章底部协议为Hexo对本站所有文章自动生成，不适用于此文章，相关授权请联系原作者。在开始处理之前有一些东西了解一下还是有好处的，不然纯粹去打命令却还不知道它是干嘛的。说明Captive Portal是安卓5引入的一种检测网络是否正常连接的机制，制作的非常有创意，通过HTTP返回的状态码是否是204来判断是否成功，如果访问得到了200带网页数据，那你就可能处在一个需要登录验证才能上网的环境里，比如说校园网，再比如说一些酒店提供的客户才能免费使用的WiFi（其实是通过DNS劫持实现的），如果连接超时（根本就连接不上）就在WiFi图标和信号图标上加一个标志，安卓5和6是叹号，安卓7改成一个叉了。只不过默认访问的是谷歌自家的验证服务器，然而由于你懂的原因，就算你连接上了网络也连不上这个服务器… 嗯…那其实还是没有连接上网络嘛… 噫….谷歌设计了一个开关来控制是否启用这个特性，同时也提供了一个变量来控制待验证的服务器地址，国内的修改版ROM通常都改成了高通中国的地址，还有一些ROM设计了代码在重启的时候恢复这个设置，不知道是出于什么目的。没更新7.0的时候，一直用小狐狸的叹号杀手，很不错的应用，可惜当时他已经很久不更新了，当时安卓N不能用，后来自己做了个小工具，想了想就干脆上架酷安吧，也能帮助大家，这样有了CaptiveMgr工具，这分明就是个没有名字的名字嘛…根本就是foo, bar一样…好像也没什么好叫的了？现在代码还比较乱，要是哪天有空把这堆代码整理出来就开源了算了，毕竟纯粹体力活。具体的原理不在这里写了，这里主要写如何去掉叹号或者叉标志。如果有root权限直接用我这个工具算了，比较方便，毕竟用命令也就是检测一下系统然后代替执行命令而已嘛。(PS: 如果使用SS/SSR可以通过NAT模式让系统直接连接，其内部是通过iptables实现的)如果没有root权限就得按下面操作了，做好配置以后重启WiFi和数据流量（打开再关闭飞行模式即可）就可以看到效果了。以下需要ADB调试，配置不赘述5.0 - 6.x教程5和6还不支持HTTPS，直接修改即可检测开关相关：先处理开关状态，这个变量删除就是默认开启的，删除操作随意执行，反正没影响，删除状态下获取这个变量会返回null。注意：如果关闭，则无法判断当前网络是否需要登录，无法自动弹出登录页面//删除 adb shell settings delete global captive_portal_server //禁用 adb shell settings put global captive_portal_server 0 //查询状态 adb shell settings get global captive_portal_server 服务器地址相关：//删除地址就可以恢复默认的谷歌服务器 adb shell settings delete global captive_portal_server //设置一个可用地址（高通/V2EX都推荐） adb shell settings put global captive_portal_server captive.v2ex.co //查询当前地址 adb shell settings get global captive_portal_server 7.0 - 7.1教程这两个版本相比5和6没有大的更改，只是默认连接服务器的时候使用HTTPS，但是提供了一个开关用以指定是否使用HTTPS检测开关相关：同5.0 - 6.xHTTPS开关相关：//删除（直接删除则默认使用HTTPS） adb shell settings delete global captive_portal_use_https //禁用HTTPS（写1启用 写0禁用） adb shell settings put global captive_portal_use_https 0 //查询HTTPS开关状态 adb shell settings get global captive_portal_use_https 服务器地址相关：（如果启用了HTTPS需要先确定地址是否支持HTTPS）同5.0 - 6.x7.1.1教程这个版本把HTTPS和HTTP两个地址分开保存，并通过7.0加入的HTTPS开关来控制使用哪一个地址。检测开关相关：同5.0 - 6.xHTTPS开关相关：同7.0 - 7.1服务器地址相关：//删除（删除默认用HTTPS） adb shell settings delete global captive_portal_https_url adb shell settings delete global captive_portal_http_url //分别修改两个地址 adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204 adb shell settings put global captive_portal_https_url https://captive.v2ex.co/generate_204 7.1.2教程此版本服务器地址判断逻辑相比7.1.1没有更改，但是检测的开关却变了。检测开关：//删除变量：（删除以后默认启用） adb shell settings delete global captive_portal_mode //关闭检测： adb shell settings put global captive_portal_mode 0 //查看当前状态： adb shell settings get global captive_portal_mode 服务器地址相关（同7.1.1）：//删除（删除默认用HTTPS） adb shell settings delete global captive_portal_https_url adb shell settings delete global captive_portal_http_url //分别修改两个地址 adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204 adb shell settings put global captive_portal_https_url https://captive.v2ex.co/generate_204 8.0.0和8.1.0和9.0(Android P)同上7.1.2，未做修改]]></content>
-      <categories>
-        <category>系统</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[Google Camera]]></title>
-    <url>%2Fport%2F%E8%BD%AF%E4%BB%B6%2FGoogle-Camera%2F</url>
-    <content type="text"><![CDATA[1.关于Google Play服务如果您的手机上已经安装有 Gapps，请跳过此节进入下一节如果手机上没有 Google Play 服务，直接使用谷歌相机会造成闪退。想安装完整的Gapps，请参阅 [未完成]对于未解锁／不想安装Gapps的用户，可以通过安装microG来使用谷歌相机，在以下链接下载microG：百度云 提取码:n15n （GoogleCamera/com.google.android.gms-13280012.apk）或直接从官网下载 Services Core：Download － microG Project关于microG：microG ProjectThe linux-based open-source mobile operating system Android is not only the most popular mobile operating system in the world, it’s also on the way to becoming a proprietary operating system. How is that?While the core operating system is still released as part of the Android Open Source Project, the majority of core apps are not. It gets worse: More and more libraries and APIs are only available on phones that run various Google apps pre-installed, effectively locking third-party apps to the Google ecosystem. For these reasons Android is described as being a “look but don’t touch” kind of open.At this point, several popular open-source applications already require some of Google’s proprietary libraries to be installed. Increasing demand in the free software community in addition to severe problems in Google’s proprietary software discovered by the Android modding community, have led to the development of a free software clone of Google’s proprietary core libraries and applications - the microG Project was born.Although most microG components are far from complete, users are amazed by the results. Free software users got extended application support, privacy-caring users can reduce or monitor data that is sent to Google and especially older phones can expect some battery life improvements. microG is not only used on real devices, but also replaces Google tools in test emulators and is even used in virtual mobile infrastructure.2.Camera API对于没有解锁／没有安装 Magisk 的用户，将您的手机打开USB调试并连接至电脑，在电脑的终端中依次输入：adb shell setprop persist.camera.HAL3.enabled 1 setprop persist.camera.enable 1 关于adb环境配置使用、USB调试。请参阅 [未完成]对于已经安装了 Magisk 的用户，可以选择安装 Camera2API enable 而不用执行上述步骤，在以下链接下载:百度云 提取码:n15n （GoogleCamera/C2API_enabler_v1500.zip）或直接从XDA下载： [Module] Camera2APIenabler关于Magisk，请参阅 [未完成] 或XDA：Magisk3.Google Camera这个地址收集了几乎所有的谷歌相机修改版：Google Camera Port一般来说 Arnova 的修改版是最为推荐的，功能也比较齐全：百度云 提取码:n15n （GoogleCamera/GCam-5.1.018-Pixel2Mod-Arnova8G2-V8.3b1.apk）Google Camera Port: Arnova8G2 apks新版本的Google相机增加了黑科技夜视仪，极大的提升了黑暗环境下的拍照效果。但日常使用尚不是特别稳定：百度云 提取码:n15n （GoogleCamera/MGC_6.1.021_V1.apk）Google Camera Port: BSG apks对于某些极其罕见的特殊情况造成的不兼容，可以尝试 Charles_l 的Nexus6p专版：百度云 提取码:n15n （GoogleCamera/camera_nx_v7.4_ZSL_chromloop.com.apk）Google Camera Port: Charles_l apks]]></content>
+    <title>Google Camera</title>
+    <url>/port/%E8%BD%AF%E4%BB%B6/Google-Camera/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="1-关于Google-Play服务"><a href="#1-关于Google-Play服务" class="headerlink" title="1.关于Google Play服务"></a>1.关于Google Play服务</h3><p> <strong>如果您的手机上已经安装有 Gapps，请跳过此节进入下一节</strong><br>  如果手机上没有 Google Play 服务，直接使用谷歌相机会造成闪退。想安装完整的Gapps，请参阅 [未完成]</p>
+<p>对于未解锁／不想安装Gapps的用户，可以通过安装microG来使用谷歌相机，在以下链接下载microG：<br><a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n （GoogleCamera/com.google.android.gms-13280012.apk）<br>或直接从官网下载 Services Core：<a href="https://microg.org/download.html">Download － microG Project</a></p>
+<p>关于microG：<a href="https://microg.org/">microG Project</a>  </p>
+<blockquote>
+<p>The linux-based open-source mobile operating system Android is not only the most popular mobile operating system in the world, it’s also on the way to becoming a proprietary operating system. How is that?<br>While the core operating system is still released as part of the Android Open Source Project, the majority of core apps are not. It gets worse: More and more libraries and APIs are only available on phones that run various Google apps pre-installed, effectively locking third-party apps to the Google ecosystem. For these reasons Android is described as being a “look but don’t touch” kind of open.<br>At this point, several popular open-source applications already require some of Google’s proprietary libraries to be installed. Increasing demand in the free software community in addition to severe problems in Google’s proprietary software discovered by the Android modding community, have led to the development of a free software clone of Google’s proprietary core libraries and applications - the microG Project was born.<br>Although most microG components are far from complete, users are amazed by the results. Free software users got extended application support, privacy-caring users can reduce or monitor data that is sent to Google and especially older phones can expect some battery life improvements. microG is not only used on real devices, but also replaces Google tools in test emulators and is even used in virtual mobile infrastructure.</p>
+</blockquote>
+<h3 id="2-Camera-API"><a href="#2-Camera-API" class="headerlink" title="2.Camera API"></a>2.Camera API</h3><ul>
+<li><p>对于没有解锁／没有安装 Magisk 的用户，将您的手机打开USB调试并连接至电脑，在电脑的终端中依次输入：   </p>
+<pre><code class="bash">adb shell
+setprop persist.camera.HAL3.enabled 1
+setprop persist.camera.enable 1</code></pre>
+<p>关于adb环境配置使用、USB调试。请参阅 [未完成]</p>
+</li>
+<li><p>对于已经安装了 Magisk 的用户，可以选择安装 Camera2API enable 而不用执行上述步骤，在以下链接下载:</p>
+</li>
+</ul>
+<p><a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n （GoogleCamera/C2API_enabler_v1500.zip）<br>或直接从XDA下载： <a href="https://forum.xda-developers.com/apps/magisk/module-camera2api-enabler-t3656651">[Module] Camera2APIenabler</a><br>关于Magisk，请参阅 [未完成] 或XDA：<a href="https://forum.xda-developers.com/apps/magisk">Magisk</a></p>
+<h3 id="3-Google-Camera"><a href="#3-Google-Camera" class="headerlink" title="3.Google Camera"></a>3.Google Camera</h3><p>这个地址收集了几乎所有的谷歌相机修改版：<a href="https://www.celsoazevedo.com/files/android/google-camera/">Google Camera Port</a>    </p>
+<p> 一般来说 Arnova 的修改版是最为推荐的，功能也比较齐全：<br><a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n （GoogleCamera/GCam-5.1.018-Pixel2Mod-Arnova8G2-V8.3b1.apk）<br><a href="https://www.celsoazevedo.com/files/android/google-camera/dev-arnova8G2/#apk411">Google Camera Port: Arnova8G2 apks</a></p>
+<p>新版本的Google相机增加了黑科技夜视仪，极大的提升了黑暗环境下的拍照效果。但日常使用尚不是特别稳定：<br><a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n （GoogleCamera/MGC_6.1.021_V1.apk）<br><a href="https://f.celsoazevedo.com/file/gcamera/MGC_6.1.021_V1.apk">Google Camera Port: BSG apks</a>  </p>
+<p>对于某些极其罕见的特殊情况造成的不兼容，可以尝试 Charles_l 的Nexus6p专版：<br><a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n （GoogleCamera/camera_nx_v7.4_ZSL_chromloop.com.apk）<br><a href="https://www.celsoazevedo.com/files/android/google-camera/dev-charles/">Google Camera Port: Charles_l apks</a>  </p>
+]]></content>
       <categories>
         <category>软件</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[About LineageOS official]]></title>
-    <url>%2Fport%2FFAQ%2FAbout-LineageOS-official%2F</url>
-    <content type="text"><![CDATA[Q:LineageOS 16 official 为什么还不更新？A:来自IssacChen的消息：angler的官方维护者跑路了。]]></content>
+    <title>Android 9.0 通用安装教程</title>
+    <url>/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><strong>注意：安装之前务必退出谷歌账号</strong></p>
+<p>准备文件:</p>
+<ul>
+<li><p>Rom卡刷包（这里以Pe为例）</p>
+</li>
+<li><p>谷歌套件(GAPPS)</p>
+</li>
+<li><p>Magisk卡刷包(用于ROOT)</p>
+</li>
+<li><p>platform-tools（使用方法参考heart大佬的教程）</p>
+</li>
+<li><p>Rec文件</p>
+</li>
+</ul>
+<p>请务必刷入最新支持FBE的Rec</p>
+<p>下载地址：<a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n (Recovery/recovery_FBE.img)</p>
+<p>1.确保手机BL锁已解，并且打开OEM解锁和USB调试，并对计算机授权。</p>
+<p>2.进入BL模式，手机关机，然后按住电源键与音量-键进入BL模式。</p>
+<p>将recovery拖入platform-tools下的文件夹，使用platform-tools下的adb.exe(按住Shift右击文件夹空白处,单击在此打开命令窗口)<br>。</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/7f3cd15638e474b5eb7f4f9a86abcda7.png" class="">
+
+<p>输入</p>
+<pre><code class="bash">fastboot flash recovery recovery.img</code></pre>
+<p>回车</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/7a19b3c5a0d0cb0e9644daf724bc83c7.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/316a9c6cd4aa35c0e75581a63bf8e037.png" class="">
+
+<p>3.按两下音量- ，再按一次电源键选中Recovery mode。</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/2f0c9f891e54a245cb7873a7cbfb73a3.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/0221884b78d4c024f169837fd4a451b2.png" class="">
+
+<p>4.点击Wipe，然后点击Format Data,输入yes确认</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/3ec63a9b1fee1d9e07f3df49471a10e7.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/4afa212236bcff824e7e3aa1b951f1fc.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/4cc1b6035eb773af42bdb67f79a4f546.png" class="">
+
+<p>5.完成后返回Rec主菜单，点击Reboot → Recovery → 滑动以确认。</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/0221884b78d4c024f169837fd4a451b2.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/9c301251a6141cc5e4ce8c4072ed60e5.png" class="">
+
+<p>6.重启再点击 Wipe → Advanced Wipe → 全部选上 → 滑动滑块以确定，完成后返回Wipe菜单</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/708b7861f35807e953f8568bd3b3ca9f.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/0d7e81d8d893b7ba17c0a9179add0f61.png" class="">
+
+<p>7.重启后来到菜单，单击 Mout，选中一下几个，然后返回菜单</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/51c901078133b6dfdde3e7427e41cca3.png" class="">
+
+<p>8.将Rom卡刷包 PixelExperience_angler-9.0-20181205-1457-OFFICIAL，Makisk卡刷包 Magisk-v17.2拖入手机存储中的TWRP文件夹</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/dfaeaca51b65966e6c490326126f36f4.png" class="">
+
+<p>9.单击Install,先选中Rom卡刷包PixelExperience_angler-9.0-20181205-1457-OFFICIAL，然后点击Add more Zips选中Magisk卡刷包，滑动确定开始刷入。</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/0be9467f6963a7d4cdc696737ff14902.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/353fc10dfb64b23209c55fdb4aeee7eb.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/InstallAndroid9/7d77bb047abd87a69dc37a1c80f413b2.png" class="">
+
+<p>10.完成，重启等待即可</p>
+]]></content>
+      <categories>
+        <category>刷机</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Magisk 模块分享</title>
+    <url>/port/%E7%B3%BB%E7%BB%9F/Magisk/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><strong>本文章全部模块可在 <a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n 的 Magsik 文件夹中下载</strong></p>
+<ol>
+<li><p>Android O APT-X libraries<br>在Oreo和Pie上开启蓝牙对APT-X协议的支持<br><a href="https://forum.xda-developers.com/apps/magisk/port-aptx-aptxhd-oreo-8-0-update-jan-t3731151">XDA</a></p>
+</li>
+<li><p>AOSP Volume Steps Increase<br>将音量调节级别提高至30<br><a href="https://forum.xda-developers.com/apps/magisk/module-aosp-volume-steps-increase-t3843492">XDA</a></p>
+</li>
+<li><p>Busybox for Android NDK<br>Busybox，这个没啥好说的。但是已知bug是这个模块会干扰Magsik Hide的运行，<strong>使添加到其中的所有App闪退</strong>。（Google Play服务会自动被添加到Magisk Hide中）<br><a href="https://forum.xda-developers.com/showpost.php?p=64228091&postcount=420">XDA</a></p>
+</li>
+<li><p>Camera2 API Enabler<br>Camera2 API，主要是为了让Google相机可以正常运行。<br><a href="https://forum.xda-developers.com/apps/magisk/module-camera2api-enabler-t3656651">XDA</a></p>
+</li>
+<li><p>Dolby Digital Plus®<br>为Oreo和Pie安装杜比全景声音效。<br><a href="https://forum.xda-developers.com/android/software/mm-p-dolby-digital-plus-arise-20181115-t3868192">XDA</a></p>
+</li>
+<li><p>Global Optimized GPS File Replacer<br>GPS玄学优化。<br><a href="https://forum.xda-developers.com/mi-5/how-to/step-step-definitive-gps-solution-global-t3695769">XDA</a></p>
+</li>
+<li><p>GPU Turbo Boost<br>GPU玄学优化，号称加速75%省电25%，不过心理安慰作用可能更大一些。<br><a href="https://forum.xda-developers.com/apps/magisk/module-gpu-turbo-boost-t3808541">XDA</a></p>
+</li>
+<li><p>Greenify4Magisk<br>给绿色守护开启系统集成的特权模式。<br><a href="https://forum.xda-developers.com/apps/magisk/module-greenify4magisk-t3606277">XDA</a></p>
+</li>
+<li><p>Lawnstep<br>须配合Lawnchair使用，在Pie上开启Pie风格的上滑最近任务栏和导航栏手势。<br><a href="https://github.com/Magisk-Modules-Repo/lawnstep">Github</a></p>
+</li>
+<li><p>Magisk Manager for Recovery  Mode (mm)<br>救砖神器，可以在TWRP中管理Magisk模块。通过在终端中输入以下命令来启动。<br>/data/media/mm<br><a href="https://forum.xda-developers.com/apps/magisk/module-tool-magisk-manager-recovery-mode-t3693165">XDA</a></p>
+</li>
+<li><p>Magisk SELinux Manager<br>用Magisk切换SELinux状态，不用每次开机改了。<br><a href="https://forum.xda-developers.com/apps/magisk/module-magisk-selinux-manager-t3760042">XDA</a></p>
+</li>
+<li><p>MagisKHide Props Config<br>通过更改设备指纹来帮助设备通过SafetyNet检查。<br><a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228">XDA</a></p>
+</li>
+<li><p>Riru - Core<br>让 Riru 模块们进入应用进程或系统服务进程并执行他们的代码，目前用途见下文。<br><a href="https://github.com/RikkaApps/Riru">Github</a></p>
+</li>
+<li><p>Riru - Location Report Enabler<br>启用Google位置报告，必须安装Riru - Core。<br><a href="https://github.com/RikkaApps/Riru/tree/master/riru-core">Github</a></p>
+</li>
+<li><p>Setting summary text file<br>修复 当语言为中文时，所有基于AOSP的ROM的设置的高级显示异常 的问题。</p>
+</li>
+<li><p>Single User Mod<br>禁用多用户功能并删除来宾账户。<br><a href="https://forum.xda-developers.com/apps/magisk/module-single-user-mod-t3639486">XDA</a></p>
+</li>
+<li><p>sleek+筑紫字体 for N+<br>本文作者制作，在Nougat以上的系统中替换字体为sleek+筑紫。<br><a href="https://www.coolapk.com/feed/5091727">酷安</a></p>
+</li>
+<li><p>Wifi Bonding (Qualcomm)<br>在高通设备上以40MHz的运行的2.4GHz / 5.0GHz的无线网络连接，其实我也不知道具体有啥用，反正安了没坏处<br><a href="https://github.com/Magisk-Modules-Repo-CN/magisk-wifi-bonding/blob/master/README.md">Github</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>身为小白你必须会的知识:从解锁到刷机</title>
+    <url>/port/%E5%88%B7%E6%9C%BA/Nexus/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h5 id="1-1-解锁"><a href="#1-1-解锁" class="headerlink" title="1.1 解锁"></a>1.1 解锁</h5><p>在Nexus6P遇到各种问题，卡在开机界面无法进入系统，也就是变砖，这时可以进入bootloader进行刷机来救砖，但进入bootloader操作的前提是要解锁，而从Nexus6开始，Google加入了OEM锁来管住bootloader锁，所以要先解OEM锁，再解bootloader锁。</p>
+<h5 id="1-2-解OEM锁"><a href="#1-2-解OEM锁" class="headerlink" title="1.2 解OEM锁"></a>1.2 解OEM锁</h5><p>解OEM锁也是非常简单的，只要打开开发者选项（在设置-系统-关于手机里面狂点版本号，如图：</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/1.jpg" class="">
+
+<p>系统会提示你 您已处于开发者模式 ），然后在开发者选项找到OEM解锁，如图：</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/2.jpg" class="">
+
+<p>这样OEM锁就解锁完成。</p>
+<h5 id="1-3-解bootloader锁"><a href="#1-3-解bootloader锁" class="headerlink" title="1.3 解bootloader锁"></a>1.3 解bootloader锁</h5><p>解好OEM锁后把手机关机，长按音量-和电源键，手机会出现一个倒地的机器人，这时你已经进入bootloader模式，接下来用数据线连接电脑，然后开始电脑操作。</p>
+<h6 id="1-3-1配置platform-tools"><a href="#1-3-1配置platform-tools" class="headerlink" title="1.3.1配置platform tools"></a>1.3.1配置platform tools</h6><p>首先你得下载Platform tools工具包</p>
+<p>下载地址：<a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n (PlatformTools)</p>
+<p>解压这个压缩包，解压后会有一个文件夹，点开后再点开里面的文件夹，然后就会看到这些：</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/3.png" class="">
+
+<p>接着开始配置环境变量，首先右键计算机（此电脑）然后点击属性，在这个窗口找到高级系统设置</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/4.png" class="">
+
+<p>接着找到环境变量</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/5.png" class="">
+
+<p>复制platform tools的文件夹目录</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/7.png" class="">
+
+<p>选择Path，点击编辑，再新建一个变量  </p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/8.png" class="">  
+
+
+<p>粘贴刚才复制的文件地址</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/9.png" class="">
+
+<p>确定，这样adb的环境变量就配置好了，以后不要移到或删除这个文件夹。</p>
+<p>对于Linux及MacOS系统的用户，我们默认您已经或可以通过搜索引擎自行掌握了相关环境的配置，故省略。如有需要，请与站点管理员<a href="/about">联系</a></p>
+<h6 id="1-3-2开始解锁"><a href="#1-3-2开始解锁" class="headerlink" title="1.3.2开始解锁"></a>1.3.2开始解锁</h6><p>打开Windows命令提示符，在打开命令窗口之后，在窗口里输入：</p>
+<pre><code>fastboot flashing unlock</code></pre>
+<p>然后回车，手机上将会出现这个提示：</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/6.png" class="">
+
+<p>音量键选择yes然后电源键确认，解锁完成。</p>
+<p>注意：解锁会清除手机所有的数据，请及时备份和退出Google账户</p>
+<h5 id="2-1-线刷官方包"><a href="#2-1-线刷官方包" class="headerlink" title="2.1 线刷官方包"></a>2.1 线刷官方包</h5><p>解锁成功后，如果不是硬件上的损坏，都可以利用线刷官方包来解决，首先手机进入bootloader</p>
+<p>电脑下载官方包，链接：</p>
+<p><a href="https://developers.google.cn/android/images">官方包</a></p>
+<ul>
+<li>方法一：</li>
+</ul>
+<p>下载合适的版本之后解压，解压完成后打开文件夹，有以下文件：</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/10.png" class="">
+
+<p>继续解压里面的压缩包，如图：</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/11.png" class="">
+
+<p>移动文件夹里的文件到上一个目录</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/12.png" class="">
+
+<p>双击里面的flash-all.bat，接着开始自动线刷，期间不要移动手机，电脑的命令窗口也不要乱动。</p>
+<ul>
+<li>方法二：</li>
+</ul>
+<p>如果按照方法一的教程出现报错，那么可以试试方法二，首先在刷机</p>
+<p>包文件夹里按shift+鼠标右键，选择在此处打开PowerShell（命令窗口）如图：</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/13.png" class="">
+
+<p>打开后在命令窗口输入（输入后回车）：</p>
+<pre><code class="bash">fastboot flash bootloader bootloader-angler-angler-03.81.img //不同的刷机包文件名不同)
+fastboot reboot bootloader
+fastboot flash radio radio-angler-angler-03.88.img //不同的刷机包文件名不同
+fastboot flash boot boot.img
+fastboot flash recovery recovery.img
+fastboot flash system system.img
+fastboot flash vendor vendor.img
+fastboot reboot</code></pre>
+<p><strong>线刷完成后手机会重启</strong></p>
+<h6 id="2-2-安装手机驱动"><a href="#2-2-安装手机驱动" class="headerlink" title="2.2 安装手机驱动"></a>2.2 安装手机驱动</h6><p>如果手机连接电脑执行命令出现这样的提示：</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/16.png" class="">
+
+<p>在检查好手机是否已经正确用数据线连接电脑并且进入bootloader模式后，如果还出现上述情况，那么就是驱动未正确安装，所以要安装手机驱动。</p>
+<ol>
+<li><p>下载手机驱动</p>
+</li>
+<li><p>解压到电脑（最好是你可以记住的位置）</p>
+</li>
+<li><p>右键此电脑（计算机），点击属性-设备管理器</p>
+</li>
+</ol>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/17.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/18.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/19.png" class="">
+
+<p>4.找到设备，一般是：nexus6p，Android Device，bootloader等等</p>
+<p>右键设备，选择更新驱动程序-浏览我的计算机以查找驱动程序</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/20.png" class="">
+
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/21.png" class="">
+
+<p>然后找到你刚才下载并解压后的文件夹，点击安装。</p>
+<h5 id="3-1-卡刷（此教程用到的rom是：Resurrect-Remix-OS-6-1）"><a href="#3-1-卡刷（此教程用到的rom是：Resurrect-Remix-OS-6-1）" class="headerlink" title="3.1 卡刷（此教程用到的rom是：Resurrect Remix OS 6.1）"></a>3.1 卡刷（此教程用到的rom是：Resurrect Remix OS 6.1）</h5><p>卡刷是把ROM存放在手机里，进入recovery模式进行刷机，recovery模式就是手机的恢复模式（相当于电脑的WindowsPE），首先刷入第三方的recovery，比如twrp（Team<br>Win Recovery Project）：</p>
+<p>进入bootloader，然后电脑下载文件，打开命令提示符，输入：</p>
+<pre><code>fastboot flash recovery</code></pre>
+<p>把下载好的文件拖入命令窗口后回车，如图：</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/15.png" class="">
+
+<p>手机bootloader按音量键出现Recovery<br>Mod时按电源键进入recovery模式（注意：不能重启进入官方rom，不然会恢复成官方recovery，twrp等于白刷。）</p>
+<p>然后会出现一个界面，直接滑动就好。</p>
+<p>滑动之后就是twrp的主界面了，接着在手机上点击wipe（清除），选择</p>
+<img src="/port/%E5%88%B7%E6%9C%BA/Nexus/22.png" class="">
+
+<p>这几个选项（俗称4清）</p>
+<p>然后把手机连接电脑，电脑出现手机的内部储存共享空间后把卡刷包复制进去，退回到主界面，点击install（安装），找到刚才的卡刷包，点击后滑动，开始刷入，开始等待。</p>
+]]></content>
+      <categories>
+        <category>刷机</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>怎么获取Nexus6p的root权限</title>
+    <url>/port/%E7%B3%BB%E7%BB%9F/Root/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Root是Android手机的进阶玩法（即获取最高权限）<br>教程分两块：</p>
+<h3 id="1-Android6-0-0-7-1-2的用户"><a href="#1-Android6-0-0-7-1-2的用户" class="headerlink" title="1  Android6.0.0-7.1.2的用户"></a>1  Android6.0.0-7.1.2的用户</h3><p>1.下载SuperSU的卡刷包并放入手机内置储存的根目录<br>2.线刷TWRP（已经刷入的忽略）<br>3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP<br>4.点击Install，找到并点击SuperSU的zip格式卡刷包<br>5.滑动滑块刷入<br>6.重启手机</p>
+<h3 id="2-Android8-1-0-9-0-0的用户"><a href="#2-Android8-1-0-9-0-0的用户" class="headerlink" title="2  Android8.1.0-9.0.0的用户"></a>2  Android8.1.0-9.0.0的用户</h3><p>1.下载Magisk的卡刷包并放入手机内置储存根目录<br>2.线刷TWRP（已经刷入的忽略）<br>3.从Bootloader进入TWRP，或者在关机状态下，按住电源键+音量上键进入TWRP<br>4.点击Install，找到并点击Magisk的zip格式卡刷包<br>5.滑动滑块刷入<br>6.重启手机</p>
+<p><em>注意：Android9.0.0的用户如果刷入Magisk之后启动器里没有Magisk Manager的话请去下载并安装</em></p>
+]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Google Nexus 6p刷机资源及工具 伸手党福利</title>
+    <url>/port/%E7%B3%BB%E7%BB%9F/download/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="关于无限重启的办法："><a href="#关于无限重启的办法：" class="headerlink" title="关于无限重启的办法："></a>关于无限重启的办法：</h3><p><a href="https://forum.xda-developers.com/nexus-6p/general/guide-fix-nexus-6p-bootloop-death-blod-t3640279">https://forum.xda-developers.com/nexus-6p/general/guide-fix-nexus-6p-bootloop-death-blod-t3640279</a>  </p>
+<hr>
+<h3 id="官方固件-中国站-："><a href="#官方固件-中国站-：" class="headerlink" title="官方固件(中国站)："></a>官方固件(中国站)：</h3><p><a href="https://developers.google.cn/android/images?hl=zh-cn#angler">https://developers.google.cn/android/images?hl=zh-cn#angler</a></p>
+<hr>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><p>adb:<a href="https://dl.google.com/android/repository/platform-tools_r28.0.1-windows.zip">https://dl.google.com/android/repository/platform-tools_r28.0.1-windows.zip</a><br>adb for mac:<a href="https://dl.google.com/android/repository/platform-tools_r28.0.1-darwin.zip">https://dl.google.com/android/repository/platform-tools_r28.0.1-darwin.zip</a><br>adb for Linux：<a href="https://dl.google.com/android/repository/platform-tools_r28.0.1-linux.zip">https://dl.google.com/android/repository/platform-tools_r28.0.1-linux.zip</a><br>百度网盘：<a href="https://pan.baidu.com/s/1x6eBWoPJbMWakHncRdzCPg">https://pan.baidu.com/s/1x6eBWoPJbMWakHncRdzCPg</a> 提取码：grzr </p>
+<p>twrp：<a href="https://twrp.me/huawei/huaweinexus6p.html">https://twrp.me/huawei/huaweinexus6p.html</a></p>
+<p>Magisk稳定版：<a href="https://github.com/topjohnwu/Magisk/releases/download/v17.1/Magisk-v17.1.zip">https://github.com/topjohnwu/Magisk/releases/download/v17.1/Magisk-v17.1.zip</a></p>
+<p>Magisk测试（Beta）版：<a href="https://github.com/topjohnwu/Magisk/releases/download/v17.3/Magisk-v17.3.zip">https://github.com/topjohnwu/Magisk/releases/download/v17.3/Magisk-v17.3.zip</a></p>
+<p>xp框架：<a href="http://dl-xda.xposed.info/framework/">http://dl-xda.xposed.info/framework/</a></p>
+<p>google卡刷包  <a href="https://opengapps.org/">https://opengapps.org/</a></p>
+<hr>
+<h3 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h3><p>FrancoKernel:<a href="https://kernels.franco-lnx.net/Nexus6P/8.1.0/anyKernel/">https://kernels.franco-lnx.net/Nexus6P/8.1.0/anyKernel/</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/orig-development/kernel-franco-kernel-r1-t3266864">https://forum.xda-developers.com/nexus-6p/orig-development/kernel-franco-kernel-r1-t3266864</a></p>
+<p>ElementalX(推荐使用):<a href="https://elementalx.org/devices/nexus-6p/">https://elementalx.org/devices/nexus-6p/</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/orig-development/kernel-elementalx-n6p-t3240571">https://forum.xda-developers.com/nexus-6p/orig-development/kernel-elementalx-n6p-t3240571</a></p>
+<hr>
+<h5 id="6-0-1rom"><a href="#6-0-1rom" class="headerlink" title="6.0.1rom"></a>6.0.1rom</h5><p>miui 8:<a href="https://androidfilehost.com/?w=files&amp;flid=187831">https://androidfilehost.com/?w=files&amp;flid=187831</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-miui-8-nexus-6p-t3617829">https://forum.xda-developers.com/nexus-6p/development/rom-miui-8-nexus-6p-t3617829</a></p>
+<h5 id="7-1-2rom"><a href="#7-1-2rom" class="headerlink" title="7.1.2rom"></a>7.1.2rom</h5><p>Pure Nexus:<a href="https://androidfilehost.com/?fid=745425885120751463">https://androidfilehost.com/?fid=745425885120751463</a><br><a href="https://goo.gl/TMclDf">https://goo.gl/TMclDf</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-pure-nexus-layers-fi-wifi-calling-t3244563">https://forum.xda-developers.com/nexus-6p/development/rom-pure-nexus-layers-fi-wifi-calling-t3244563</a></p>
+<p>CarbonROM:<a href="http://get.carbonrom.org/device-angler.html">http://get.carbonrom.org/device-angler.html</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/7-x-x-carbonrom-cr-5-1-t3530281">https://forum.xda-developers.com/nexus-6p/development/7-x-x-carbonrom-cr-5-1-t3530281</a></p>
+<h5 id="8-1-0rom"><a href="#8-1-0rom" class="headerlink" title="8.1.0rom"></a>8.1.0rom</h5><p>LineageOS:<a href="https://download.lineageos.org/angler">https://download.lineageos.org/angler</a><br>清华大学源:<a href="https://mirrors.tuna.tsinghua.edu.cn/lineage-rom/full/angler/">https://mirrors.tuna.tsinghua.edu.cn/lineage-rom/full/angler/</a><br>中科大源:<a href="http://mirrors.ustc.edu.cn/lineageos/full/angler">http://mirrors.ustc.edu.cn/lineageos/full/angler</a></p>
+<p>ABC ROM 8.1.0:<a href="https://kantjer.com/">https://kantjer.com/</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/custom-roms/android-builders-collective/rom-builders-collective-t2861778">https://forum.xda-developers.com/custom-roms/android-builders-collective/rom-builders-collective-t2861778</a></p>
+<p>ResurrectionRemix Oreo:<a href="https://sourceforge.net/projects/resurrectionremix-oreo/files/angler/">https://sourceforge.net/projects/resurrectionremix-oreo/files/angler/</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-resurrection-remix-os-6-0-0-t3753578">https://forum.xda-developers.com/nexus-6p/development/rom-resurrection-remix-os-6-0-0-t3753578</a></p>
+<p>Havoc-OS：<a href="https://sourceforge.net/projects/havoc-os/files/angler/">https://sourceforge.net/projects/havoc-os/files/angler/</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/havoc-os-nexus-6p-angler-t3830118">https://forum.xda-developers.com/nexus-6p/development/havoc-os-nexus-6p-angler-t3830118</a></p>
+<p>crDroid：<a href="https://sourceforge.net/projects/crdroid/files/angler/crdroid-o/">https://sourceforge.net/projects/crdroid/files/angler/crdroid-o/</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-crdroid-android-t3723622">https://forum.xda-developers.com/nexus-6p/development/rom-crdroid-android-t3723622</a></p>
+<p>AICP 13.1:<a href="https://dwnld.aicp-rom.com/">https://dwnld.aicp-rom.com/</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-aicp-13-o8-0-xrxx-official-nightlies-t3683688">https://forum.xda-developers.com/nexus-6p/development/rom-aicp-13-o8-0-xrxx-official-nightlies-t3683688</a></p>
+<p>AquariOS:<a href="https://androidfilehost.com/?w=files&amp;flid=196672">https://androidfilehost.com/?w=files&amp;flid=196672</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-aquarios-8-1-0-theming-live-support-t3768302">https://forum.xda-developers.com/nexus-6p/development/rom-aquarios-8-1-0-theming-live-support-t3768302</a></p>
+<p>CarbonROM:<a href="https://get.carbonrom.org/device-angler.html">https://get.carbonrom.org/device-angler.html</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/8-1-x-carbonrom-cr-6-1-t3773838">https://forum.xda-developers.com/nexus-6p/development/8-1-x-carbonrom-cr-6-1-t3773838</a></p>
+<p>NitrogenOSO:<a href="https://androidfilehost.com/?w=files&amp;flid=237033">https://androidfilehost.com/?w=files&amp;flid=237033</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-oms-nitrogen-os-o-26-12-2017-t3725887">https://forum.xda-developers.com/nexus-6p/development/rom-oms-nitrogen-os-o-26-12-2017-t3725887</a></p>
+<h5 id="9-0-0rom"><a href="#9-0-0rom" class="headerlink" title="9.0.0rom"></a>9.0.0rom</h5><p>AOSP:<a href="https://www.androidfilehost.com/?fid=1322778262904021086">https://www.androidfilehost.com/?fid=1322778262904021086</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-aosp-t3843647">https://forum.xda-developers.com/nexus-6p/development/rom-aosp-t3843647</a></p>
+<p>Statixos:<a href="https://mega.nz/#F!NroGlaSY!MWu7V7WLfoTUQyCeUMK-_A">https://mega.nz/#F!NroGlaSY!MWu7V7WLfoTUQyCeUMK-_A</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-statixos-t3832438">https://forum.xda-developers.com/nexus-6p/development/rom-statixos-t3832438</a><br>(bootloop用户可正常刷入这个rom包，详细方法请进入xda帖子↑)</p>
+<p>PixelExperience官方:<a href="https://download.pixelexperience.org/angler/">https://download.pixelexperience.org/angler/</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-pixelexperience-t3869744">https://forum.xda-developers.com/nexus-6p/development/rom-pixelexperience-t3869744</a></p>
+<p>AICP14.0非官方:<a href="https://basketbuild.com/devs/semdoc/angler-pie">https://basketbuild.com/devs/semdoc/angler-pie</a><br>因为我不知道aicp14.0是不是跟aicp13.1同一个作者开发出来的包，<br>所以作者xda的帖子暂时没有</p>
+<p>AOSiP:<a href="https://androidfilehost.com/?fid=11410963190603870695">https://androidfilehost.com/?fid=11410963190603870695</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-unofficial-aosip-pie-beta-t3877510">https://forum.xda-developers.com/nexus-6p/development/rom-unofficial-aosip-pie-beta-t3877510</a></p>
+<p>AospExtended ROM V6.0：<a href="https://downloads.aospextended.com/angler">https://downloads.aospextended.com/angler</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-aospextended-rom-v6-0-t3873592">https://forum.xda-developers.com/nexus-6p/development/rom-aospextended-rom-v6-0-t3873592</a></p>
+<p>crDroid for Pie<a href="https://sourceforge.net/projects/crdroid/files/angler/crdroid-p/">https://sourceforge.net/projects/crdroid/files/angler/crdroid-p/</a><br>作者xda的帖子:<a href="https://forum.xda-developers.com/nexus-6p/development/rom-crdroid-android-t3882528">https://forum.xda-developers.com/nexus-6p/development/rom-crdroid-android-t3882528</a></p>
+]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如何强制4G</title>
+    <url>/port/FAQ/forcelte/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h6 id="Q：如何强制使用LTE"><a href="#Q：如何强制使用LTE" class="headerlink" title="Q：如何强制使用LTE"></a>Q：如何强制使用LTE</h6><h6 id="A：打开手机拨号界面，输入"><a href="#A：打开手机拨号界面，输入" class="headerlink" title="A：打开手机拨号界面，输入"></a>A：打开手机拨号界面，输入</h6><pre><code>*#*#4636#*#*</code></pre>
+<p>在弹出的界面中选择手机信息，将首选网络类型设置为 LTE Only  </p>
+<img src="/port/FAQ/forcelte/1.jpg" class="">
+<p>** 如果您的所在地区没有4G信号或您的手机不支持当地频段，此改动可能导致您的手机没有信号。如果出现此情况，请改回默认设置。 **<br>** 如果您所在地区不支持VoLTE，此改动将导致您无法接听及拨打电话 **</p>
+<p>默认3G网络制式：  </p>
+<ul>
+<li>移动3G：TD-SCDMA  </li>
+<li>联通：WCDMA  </li>
+<li>电信：CDMA  </li>
+</ul>
+]]></content>
       <categories>
         <category>FAQ</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2Fport%2Funcategorized%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.Quick StartCreate a new post$ hexo new &quot;My New Post&quot; More info: WritingRun server$ hexo server More info: ServerGenerate static files$ hexo generate More info: GeneratingDeploy to remote sites$ hexo deploy More info: Deployment]]></content>
+    <title>Hello World</title>
+    <url>/port/uncategorized/hello-world/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre>
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>过Google账户锁</title>
+    <url>/port/%E7%B3%BB%E7%BB%9F/passgoogle/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h5 id="1-1-了解什么是Google锁"><a href="#1-1-了解什么是Google锁" class="headerlink" title="1.1 了解什么是Google锁"></a>1.1 了解什么是Google锁</h5><p>如果在带有Google服务的ROM上登入了你的Google账户，然后再恢复出场设置或者刷带有Google服务的ROM，那么就会被Google锁住（账户锁），必须要连接网络才可以继续，然而在我大天朝，是不能正常访问Google服务的，所以很多机友在这个地方卡住。（本人也中招5次）</p>
+<h5 id="1-2-电脑翻墙"><a href="#1-2-电脑翻墙" class="headerlink" title="1.2 电脑翻墙"></a>1.2 电脑翻墙</h5><p>首先，你要有一台可以正常连接WIFI的电脑，和一个能正常上网的路由器，如果有，那么就开始电脑操作：</p>
+<p>第一步：下载SSR工具（Windows）</p>
+<p>下载后解压，解压后运行2.0或者4.0的应用程序，如图</p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/1.png" class="">
+
+<p>会弹出防火墙窗口，不要管它，点击允许访问。</p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/2.png" class="">
+
+<p>接着输入SSR账户信息（需要购买），或者右键客户端点击二维码扫描，(打开某个节点的二维码，让二维码显示在桌面中以便客户端能扫描得到)然后点确定。如无法扫码也可以复制SSR://链接，右键客户端的”剪贴板批量导入SSR://链接”来导入节点。</p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/3.png" class="">
+
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/4.png" class="">
+
+<p>然后右键任务栏上的上的SSR图标</p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/5.png" class="">
+
+<p>弹出主菜单后找到”系统代理模式”把它勾选为PAC模式，”代理规则”勾选为”绕过局域网和大陆”，”选项设置”里面把”允许来自局域网的连接”勾上。</p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/6.png" class="">
+
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/7.png" class="">
+
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/8.png" class="">
+
+<p>接着查看这台电脑的IP地址</p>
+<p>打开电脑的命令提示符，输入ipconfig，出现如下文字，</p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/9.png" class="">
+
+<p>然后记住IPv4地址</p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/10.png" class="">
+
+<p>电脑设置完成。</p>
+<h5 id="1-2-1-手机设置"><a href="#1-2-1-手机设置" class="headerlink" title="1.2.1 手机设置"></a>1.2.1 手机设置</h5><p>在联网界面连上电脑已经连接的Wi-Fi，先不要急着输密码，点击下面的”高级选项”</p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/11.png" class="">
+
+<p>选择”代理”然后再选”手动”</p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/passgoogle/12.png" class="">
+
+<p>接着输入代理服务器主机名（输入刚才记下的IPv4地址），”代理端口”输入1080。</p>
+<h5 id="1-3-完成"><a href="#1-3-完成" class="headerlink" title="1.3 完成"></a>1.3 完成</h5><p>设置完成后输入密码连接，然后慢慢等着输入账号吧。</p>
+]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>如何跳过Google的开机向导</title>
+    <url>/port/%E7%B3%BB%E7%BB%9F/%E5%A6%82%E4%BD%95%E8%B7%B3%E8%BF%87Google%E7%9A%84%E5%BC%80%E6%9C%BA%E5%90%91%E5%AF%BC/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="如何跳gapps"><a href="#如何跳gapps" class="headerlink" title="如何跳gapps"></a>如何跳gapps</h1><p>Android 手机在刷了 Gapps 之后，在开机进入系统时会进入 Gapps 的开机引导（也就是设置 Google 帐号神马的）。但是这需要连 Google 进行验证，于是……</p>
+<p>对于这种情况，可以通过以下方法解决：</p>
+<p>连 Google 进行验证<br>断网<br>顺时针点屏幕四角<br>更改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED</p>
+<h2 id="1-连-Google-进行验证"><a href="#1-连-Google-进行验证" class="headerlink" title="1. 连 Google 进行验证"></a>1. 连 Google 进行验证</h2><p>这个方法就不多说了，只要能连上 Google，就不会卡在这里了。至于怎么连 Google，请自行寻找科学上网的方法</p>
+<p>参考：<a href="/port/%E7%B3%BB%E7%BB%9F/passgoogle/">/port/%E7%B3%BB%E7%BB%9F/passgoogle/</a></p>
+<h2 id="2-断网"><a href="#2-断网" class="headerlink" title="2. 断网"></a>2. 断网</h2><p>这个 Gapps 的开机引导是需要连网进行的，默认的情况下如果不连网的情况下是会自动跳过的。但是许多系统在默认情况下 Wifi 和数据是会自动打开，就算把卡取了，也还会有 Wifi，一样无法跳过。对此，可选择先不刷 Gapps，进入系统后将 Wifi 的数据关闭，再刷 Gapps，此方法有一定弊端，有可能会导致 Gapps 某些应用发生某些玄学问题…，比如闪退，未响应，停止运行等</p>
+<h2 id="3-顺时针点屏幕四角"><a href="#3-顺时针点屏幕四角" class="headerlink" title="3. 顺时针点屏幕四角"></a>3. 顺时针点屏幕四角</h2><p>这可能是最玄学的一个方法了，据传连点屏幕四角就可跳过此引导（顺时针方向，从左上角开始）。但是！！！但是！！！这是看你运气的时刻，时灵时不灵。别问我是怎么知道的。 (╯‵□′)╯︵┻━┻</p>
+<h2 id="4-更改-USER-SETUP-COMPLETE-和-DEVICE-PROVISIONED"><a href="#4-更改-USER-SETUP-COMPLETE-和-DEVICE-PROVISIONED" class="headerlink" title="4. 更改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED"></a>4. 更改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED</h2><p>敲黑板！！！ 这是我所试过最科学的方法。在开机情况下，将手机连上电脑，使用 adb 工具来修改 USER_SETUP_COMPLETE 和 DEVICE_PROVISIONED 的值。具体操作如下：</p>
+<p>打开命令行，输入命令：</p>
+<pre><code class="bash">adb shell settings put secure user_setup_complete 1
+adb shell settings put global device_provisioned 1</code></pre>
+<p>重启，搞定。</p>
+<p><em>注意：如果没有把adb.exe添加到环境变量的话输入上述命令会出现错误！！</em></p>
+<p>一般的类原生系统 ADB 默认是打开的，及时没有进入系统，依旧可以通过 ADB 设置，手机官方系统一般 ADB 默认关闭的</p>
+<p>注：<br>在 WINDOWS 下，如果未将 adb.exe 文件所在路径添加至环境变量中，则需要在 adb.exe 文件所在目录下打开命令行，而后将上述命令中的 adb更改为./adb.exe。<br>上述命令运行错误时会有提示，而成功则没有。</p>
+<h2 id="5-终极方法"><a href="#5-终极方法" class="headerlink" title="5. 终极方法"></a>5. 终极方法</h2><p>有twrp的话在TWRP里的终端输入</p>
+<pre><code class="bash">dd if=/dev/zero of=/dev/block/bootdevice/by-name/frp</code></pre>
+<p>即可跳过</p>
+<p>PS：进入TWRP终端的方法请度娘。</p>
+]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>干掉淘宝和QQ自动WebView核心</title>
+    <url>/port/%E8%BD%AF%E4%BB%B6/%E5%B9%B2%E6%8E%89%E6%B7%98%E5%AE%9D%E5%92%8CQQ%E8%87%AA%E5%B8%A6WebView%E6%A0%B8%E5%BF%83/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><ul>
+<li><p>阿里系的应用因为其臃肿卡顿饱受诟病，究其症结，淘宝、支付宝、闲鱼等阿里系应用都大量应用了WebView</p>
+</li>
+<li><p>提到WebView，其在安卓中的应用还是非常广泛的。提到阿里的WebView，就不得不提到UC，UC浏览器在塞班系统上表现无敌，然而在Android上表现平平，在加入阿里系之后完全跻身“毒瘤”行列。</p>
+</li>
+<li><p>淘宝、闲鱼、支付宝为什么这么大？在查看data文件夹后不难发现它们都内置了一个30M的UC WebView组件，这个组件相对于目前主流手机的Android Webv（MIUI10系统WebView已经基于Chrome 62），表现是比较差的</p>
+</li>
+<li><p>让这些软件直接调用系统WebView，能够降低RAM占用，同时提供更好的浏览体验</p>
+</li>
+</ul>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>以下操作需要获取Root权限</p>
+<h2 id="淘宝UC核心路径"><a href="#淘宝UC核心路径" class="headerlink" title="淘宝UC核心路径"></a>淘宝UC核心路径</h2><blockquote>
+<p>/data/data/com.taobao.taobao/app_ucmsdk/updates/(数字)/(数字)/lib/libwebviewuc.so</p>
+</blockquote>
+<h2 id="闲鱼UC核心路径"><a href="#闲鱼UC核心路径" class="headerlink" title="闲鱼UC核心路径"></a>闲鱼UC核心路径</h2><blockquote>
+<p>/data/data/com.taobao.idlefish/app_ucmsdk/updates/(数字)/(数字)/lib/libwebviewuc.so</p>
+</blockquote>
+<p>以上两者直接删除30M的libwebviewuc.so既可</p>
+<h2 id="支付宝UC核心路径"><a href="#支付宝UC核心路径" class="headerlink" title="支付宝UC核心路径"></a>支付宝UC核心路径</h2><blockquote>
+<p>/data/data/com.eg.android.AlipayGphone/app_h5container</p>
+</blockquote>
+<p>将该文件夹权限设置为000（去掉所有权限的勾），然后删除该文件夹下所有文件既可</p>
+<h2 id="腾讯系应用"><a href="#腾讯系应用" class="headerlink" title="腾讯系应用"></a>腾讯系应用</h2><p>对于腾讯系的应用（QQ\微信）其采用的是QQ浏览器X5内核，基于Chrome 57，如果你的手机WebView版本更高，可以考虑关闭X5内核</p>
+<p>在QQ/微信中访问 <a href="http://debugtbs.qq.com/">http://debugtbs.qq.com</a></p>
+<p>选择右下角禁用内核既可</p>
+<p>结语<br>内核检测工具</p>
+<p><a href="https://ie.icoa.cn/">https://ie.icoa.cn/</a></p>
+<p><a href="http://liulanmi.com/">http://liulanmi.com/</a></p>
+<p>​禁用软件自带的WebView可能造成部分不兼容的问题，腾讯系重新打开X5内核、阿里重新覆盖安装一次既可</p>
+]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>老司机带你优化Nexus 6p</title>
+    <url>/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="系统优化"><a href="#系统优化" class="headerlink" title="系统优化"></a>系统优化</h1><p>　　看到群里面很多人说手机卡，发热，但又不能每次都在线一部部的交吧，故写篇教材<br>　　优化前提首先你要有root，这里推荐使用Magisk，因为稍候会用到一些模块（如果不会刷入的可以看我们上一篇教程）</p>
+<h2 id="优化1（刷入模块-记得刷入后重启哦😝）"><a href="#优化1（刷入模块-记得刷入后重启哦😝）" class="headerlink" title="优化1（刷入模块,记得刷入后重启哦😝）"></a>优化1（刷入模块,记得刷入后重启哦😝）</h2><p>首先我们先刷入调度模块viper调度</p>
+<p><a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n （优化教程/viper调度（酷安ID：TSU守望者）.zip）  </p>
+<p>群里还有很多人使用gapps的，耗电高怎么办没问题，使用模块让它乖乖打盹<br>这里推荐 Universal GMS Doze</p>
+<p><a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n （优化教程/Universal_GMS_Doze-v1.6.1_(LST01F,_Mar_2019).zip）</p>
+<h3 id="这里使用Magisk刷入，当然你也可以用rec刷入（下面是刷入方法）"><a href="#这里使用Magisk刷入，当然你也可以用rec刷入（下面是刷入方法）" class="headerlink" title="这里使用Magisk刷入，当然你也可以用rec刷入（下面是刷入方法）"></a>这里使用Magisk刷入，当然你也可以用rec刷入（下面是刷入方法）</h3><p>先打开面具🎭，如图</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/1.png" class="">
+<p>然后滑出侧栏，如图</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/2.png" class="">
+<p>再点击模块，如图</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/3.png" class="">
+<p>再点击加号，找到要刷入的模块，点击模块，就会看到如图，这里是以viper调度为例</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/4.png" class="">
+<p>最后点击关闭刷入其他模块，或者点击重启就大功告成了</p>
+<h2 id="优化2"><a href="#优化2" class="headerlink" title="优化2"></a>优化2</h2><p>使用黑域这里推荐群里面的版本</p>
+<p><a href="https://pan.baidu.com/s/112OsDSGCA6iGsHXtB3_YIg">百度云</a> 提取码:n15n （优化教程/黑域_3.0.7.apk）</p>
+<p>　　<br>进入黑域后首先会看到这个画面不用管，直接滑动到使用，授予root权限即可</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/5.png" class="">
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/6.png" class="">
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/7.png" class="">
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/8.png" class="">
+
+<h3 id="下面就是如何设置黑域了（这可能是最详细的黑域使用教程）"><a href="#下面就是如何设置黑域了（这可能是最详细的黑域使用教程）" class="headerlink" title="下面就是如何设置黑域了（这可能是最详细的黑域使用教程）"></a>下面就是如何设置黑域了（这可能是最详细的黑域使用教程）</h3><p>先点击右上角三个点</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/9.png" class="">
+<p>然后按图片将设置里面的开关打开或关掉</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/10.png" class="">
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/11.png" class="">
+<p>然后回到黑域主界面</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/12.png" class="">
+<p>先随便点一个图标（记住是图标，不是文字）</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/13.png" class="">
+<p>然后点击反选</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/14.png" class="">
+<p>会显示如图</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/15.png" class="">
+<p>接着把反选之后没有选择的图标点一下，会显示如图</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/16.png" class="">
+<p>再点击</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/17.png" class="">
+<p>如果你不想让黑域杀掉一些应用，想使他长驻后台可以加入白名单<br>如图所示</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/18.png" class="">
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/19.png" class="">
+
+<h3 id="黑域还有一个冻结的功能，冻结你不常使用的功能"><a href="#黑域还有一个冻结的功能，冻结你不常使用的功能" class="headerlink" title="黑域还有一个冻结的功能，冻结你不常使用的功能"></a>黑域还有一个冻结的功能，冻结你不常使用的功能</h3><p>有了它你不用再装冰箱，小黑屋等冻结软件，可以说是非常强大了<br>点击需要冻结的app，这次就不要点图标，要点图标以外的地方，然后选择冻结就行了，如图</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/20.png" class="">
+
+<h3 id="黑域还有一个很特殊的功能，就是无需电脑使用adb命令"><a href="#黑域还有一个很特殊的功能，就是无需电脑使用adb命令" class="headerlink" title="黑域还有一个很特殊的功能，就是无需电脑使用adb命令"></a>黑域还有一个很特殊的功能，就是无需电脑使用adb命令</h3><p>只沉浸状态栏： </p>
+<pre><code class="bash">adb shell settings put global policy_control immersive.status=*</code></pre>
+<p>　<br>只沉浸导航栏：</p>
+<pre><code class="bash">adb shell settings put global policy_control immersive.navigation=*</code></pre>
+<p>　　<br>沉浸导航栏和状态栏： </p>
+<pre><code class="bash">adb shell settings put global policy_control immersive.full=*</code></pre>
+<p>恢复官方默认： </p>
+<pre><code class="bash">adb shell settings put global policy_control null</code></pre>
+<p>单独控制某一个app不沉浸，比如以下代码设定google实时界面不沉浸，其他程序沉浸：</p>
+<pre><code class="bash">adb shell setting put global policy_control immersive.navigation=apps,-ch.deletescape.lawnchair.ci</code></pre>
+<p>例如这些指令，使用前删掉adb shell就可以使用黑域使用了</p>
+<pre><code class="bash">settings put global policy_control immersive.navigation=apps,-ch.deletescape.lawnchair.ci,-com.google.android.GoogleCamera,-com.google.android.inputmethod.latin</code></pre>
+<p>好了黑域教程到此为止了</p>
+<h2 id="优化3"><a href="#优化3" class="headerlink" title="优化3"></a>优化3</h2><p>　　你还在怕app窃取你的隐私吗？关了权限无法打开app的情况吗？还怕毒瘤软件在后台长期运行，导致手机卡卡的吗？有了它你就就不必担心，它就是神器 App ops，一款系统给了权限，但只要它不给权限照样无法读取你的权限的管理应用，麻麻再也不用担心隐私泄露了</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>系统里面给应用权限，app ops拒绝权限这样应用就无法使用该权限了</p>
+<p>有人要问了，我需要这个权限，但只想在使用的时候用到它，而不想让它在后台使用该怎么办？没问题，app ops加入了这个解决方案</p>
+<h3 id="以淘宝为例"><a href="#以淘宝为例" class="headerlink" title="以淘宝为例"></a>以淘宝为例</h3><p>选择前台时允许就可以完美解决这个问题，如图所示</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/21.png" class="">
+<p>在使用安卓9.0的时候我们还可以用appops可以加以限制后台，让毒瘤无法在后台肆无忌惮运行，压死毒瘤</p>
+<h3 id="同样以淘宝为例子"><a href="#同样以淘宝为例子" class="headerlink" title="同样以淘宝为例子"></a>同样以淘宝为例子</h3><p>滑到权限最下面，点击在后台运行，选择严格限制，如图所示</p>
+<img src="/port/%E8%BD%AF%E4%BB%B6/%E8%80%81%E5%8F%B8%E6%9C%BA%E5%B8%A6%E4%BD%A0%E4%BC%98%E5%8C%96Nexus%206p/22.png" class="">　　]]></content>
+      <categories>
+        <category>软件</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>[转] 原生安卓WiFi信号去叹号去叉教程5.0-Android P</title>
+    <url>/port/%E7%B3%BB%E7%BB%9F/%E8%BD%AC-%E5%8E%9F%E7%94%9F%E5%AE%89%E5%8D%93WiFi%E4%BF%A1%E5%8F%B7%E5%8E%BB%E5%8F%B9%E5%8F%B7%E5%8E%BB%E5%8F%89%E6%95%99%E7%A8%8B5-0-Android-P/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><strong>本文转载自 <a href="https://www.evil42.com/index.php/archives/17/">evil42.com</a> ，已获得原作者授权。文章底部协议为Hexo对本站所有文章自动生成，不适用于此文章，相关授权请联系原作者。</strong>  </p>
+<p>在开始处理之前有一些东西了解一下还是有好处的，不然纯粹去打命令却还不知道它是干嘛的。</p>
+<h6 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h6><p>Captive Portal是安卓5引入的一种检测网络是否正常连接的机制，制作的非常有创意，通过HTTP返回的状态码是否是204来判断是否成功，如果访问得到了200带网页数据，那你就可能处在一个需要登录验证才能上网的环境里，比如说校园网，再比如说一些酒店提供的客户才能免费使用的WiFi（其实是通过DNS劫持实现的），如果连接超时（根本就连接不上）就在WiFi图标和信号图标上加一个标志，安卓5和6是叹号，安卓7改成一个叉了。只不过默认访问的是谷歌自家的验证服务器，然而由于你懂的原因，就算你连接上了网络也连不上这个服务器… 嗯…那其实还是没有连接上网络嘛… 噫….</p>
+<p>谷歌设计了一个开关来控制是否启用这个特性，同时也提供了一个变量来控制待验证的服务器地址，国内的修改版ROM通常都改成了高通中国的地址，还有一些ROM设计了代码在重启的时候恢复这个设置，不知道是出于什么目的。</p>
+<p>没更新7.0的时候，一直用小狐狸的<a href="http://www.coolapk.com/apk/org.foxteam.noisyfox.noexclamation">叹号杀手</a>，很不错的应用，可惜当时他已经很久不更新了，当时安卓N不能用，后来自己做了个小工具，想了想就干脆上架酷安吧，也能帮助大家，这样有了<a href="http://www.coolapk.com/apk/tech.evlsoc.captivemgr">CaptiveMgr工具</a>，这分明就是个没有名字的名字嘛…根本就是foo, bar一样…好像也没什么好叫的了？现在代码还比较乱，要是哪天有空把这堆代码整理出来就开源了算了，毕竟纯粹体力活。</p>
+<p>具体的原理不在这里写了，这里主要写如何去掉叹号或者叉标志。</p>
+<p>如果有root权限直接用<a href="http://www.coolapk.com/apk/tech.evlsoc.captivemgr">我这个工具</a>算了，比较方便，毕竟用命令也就是检测一下系统然后代替执行命令而已嘛。<br>(PS: 如果使用SS/SSR可以通过NAT模式让系统直接连接，其内部是通过iptables实现的)</p>
+<p>如果没有root权限就得按下面操作了，做好配置以后重启WiFi和数据流量（打开再关闭飞行模式即可）就可以看到效果了。</p>
+<hr>
+<p>** 以下需要ADB调试，配置不赘述 **</p>
+<h6 id="5-0-6-x教程"><a href="#5-0-6-x教程" class="headerlink" title="5.0 - 6.x教程"></a>5.0 - 6.x教程</h6><p>5和6还不支持HTTPS，直接修改即可</p>
+<ul>
+<li>检测开关相关：</li>
+</ul>
+<p>先处理开关状态，这个变量删除就是默认开启的，删除操作随意执行，反正没影响，删除状态下获取这个变量会返回null。<br>注意：如果关闭，则无法判断当前网络是否需要登录，无法自动弹出登录页面</p>
+<pre><code class="bash">//删除
+adb shell settings delete global captive_portal_server
+//禁用
+adb shell settings put global captive_portal_server 0
+//查询状态
+adb shell settings get global captive_portal_server</code></pre>
+<ul>
+<li>服务器地址相关：</li>
+</ul>
+<pre><code class="bash">//删除地址就可以恢复默认的谷歌服务器
+adb shell settings delete global captive_portal_server
+//设置一个可用地址（高通/V2EX都推荐）
+adb shell settings put global captive_portal_server captive.v2ex.co
+//查询当前地址
+adb shell settings get global captive_portal_server</code></pre>
+<h6 id="7-0-7-1教程"><a href="#7-0-7-1教程" class="headerlink" title="7.0 - 7.1教程"></a>7.0 - 7.1教程</h6><p>这两个版本相比5和6没有大的更改，只是默认连接服务器的时候使用HTTPS，但是提供了一个开关用以指定是否使用HTTPS</p>
+<ul>
+<li>检测开关相关：</li>
+</ul>
+<p>同5.0 - 6.x  </p>
+<ul>
+<li>HTTPS开关相关：</li>
+</ul>
+<pre><code class="bash">//删除（直接删除则默认使用HTTPS）
+adb shell settings delete global captive_portal_use_https
+//禁用HTTPS（写1启用 写0禁用）
+adb shell settings put global captive_portal_use_https 0
+//查询HTTPS开关状态
+adb shell settings get global captive_portal_use_https</code></pre>
+<ul>
+<li>服务器地址相关：<br>（如果启用了HTTPS需要先确定地址是否支持HTTPS）<br>同5.0 - 6.x</li>
+</ul>
+<h6 id="7-1-1教程"><a href="#7-1-1教程" class="headerlink" title="7.1.1教程"></a>7.1.1教程</h6><p>这个版本把HTTPS和HTTP两个地址分开保存，并通过7.0加入的HTTPS开关来控制使用哪一个地址。</p>
+<ul>
+<li><p>检测开关相关：<br>同5.0 - 6.x</p>
+</li>
+<li><p>HTTPS开关相关：<br>同7.0 - 7.1</p>
+</li>
+<li><p>服务器地址相关：  </p>
+<pre><code class="bash">//删除（删除默认用HTTPS）
+adb shell settings delete global captive_portal_https_url
+adb shell settings delete global captive_portal_http_url
+//分别修改两个地址
+adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204
+adb shell settings put global captive_portal_https_url https://captive.v2ex.co/generate_204</code></pre>
+</li>
+</ul>
+<h6 id="7-1-2教程"><a href="#7-1-2教程" class="headerlink" title="7.1.2教程"></a>7.1.2教程</h6><p>此版本服务器地址判断逻辑相比7.1.1没有更改，但是检测的开关却变了。</p>
+<ul>
+<li><p>检测开关：  </p>
+<pre><code class="bash">//删除变量：（删除以后默认启用）
+adb shell settings delete global captive_portal_mode
+//关闭检测：
+adb shell settings put global captive_portal_mode 0
+//查看当前状态：
+adb shell settings get global captive_portal_mode</code></pre>
+</li>
+<li><p>服务器地址相关（同7.1.1）：  </p>
+<pre><code>//删除（删除默认用HTTPS）
+adb shell settings delete global captive_portal_https_url
+adb shell settings delete global captive_portal_http_url
+//分别修改两个地址
+adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204
+adb shell settings put global captive_portal_https_url https://captive.v2ex.co/generate_204</code></pre>
+</li>
+</ul>
+<h6 id="8-0-0和8-1-0和9-0-Android-P-同上7-1-2，未做修改"><a href="#8-0-0和8-1-0和9-0-Android-P-同上7-1-2，未做修改" class="headerlink" title="8.0.0和8.1.0和9.0(Android P)同上7.1.2，未做修改"></a>8.0.0和8.1.0和9.0(Android P)同上7.1.2，未做修改</h6>]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Android漫谈</title>
+    <url>/port/%E7%B3%BB%E7%BB%9F/Android%E6%BC%AB%E8%B0%88/</url>
+    <content><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>大家好，我是神经元，一个Android开发方向的小萌新，今天来和大家聊一聊Android系统相关的一些话题。本人学艺不精，也并非擅长计算机领域的方方面面，有所纰漏在所难免，如果有疑问欢迎大家指正讨论。下面是我的Github ：<a href="https://github.com/singleNeuron">singleNeuron</a></p>
+<h3 id="隐私问题"><a href="#隐私问题" class="headerlink" title="隐私问题"></a>隐私问题</h3><p>百度的董事长李彦宏曾经说过这样一句话：“中国人对隐私问题的态度更加开放，也相对来说没那么敏感。如果他们可以用隐私换取便利、安全或者效率。在很多情况下，他们就愿意这么做。”在享受互联网带来的便利的同时，隐私问题也正逐渐受到越来越多普通人的关注。然而，许可协议中晦涩繁杂的法律术语和让人不知所云的技术词汇却让许多普通人望而却步。今天，我将在技术的层面简单的分析一下目前常见的隐私信息及防范方式。</p>
+<h4 id="MIUI12"><a href="#MIUI12" class="headerlink" title="MIUI12"></a>MIUI12</h4><p>相信许多小米手机的用户已经收到了MIUI12的更新推送，在新系统的众多功能和视效之中，我相信“照明弹”一定是吸引了众多媒体和用户关注的一个重要功能。所有安装的应用的唤醒、权限的申请及使用都在这里面显示的让人一目了然，在感叹MIUI团队的别出心裁之时，不少人也对其中应用之乱像深感害怕。</p>
+<h4 id="3·15晚会"><a href="#3·15晚会" class="headerlink" title="3·15晚会"></a>3·15晚会</h4><p>而在每年的3·15晚会上，用户的隐私问题也被频频提及。就在今年，央视点名报道了数十款SDK（Software Development Kit，即一组提供给其他开发者以简单使用某些功能的工具包，如在App内提供地图显示时可能会使用高德地图SDK，获取应用崩溃统计可能会用到腾讯Bugly平台工具包）存在窃取个人隐私信息的行为。</p>
+<h3 id="交叉唤醒"><a href="#交叉唤醒" class="headerlink" title="交叉唤醒"></a>交叉唤醒</h3><p>Android系统中的交叉唤醒也是让用户头疼的一个重要问题。手机越用越慢，每天有一大堆广告和垃圾资讯推送，明明没开多少应用却内存不足 ……<br>由于某些众所周知的原因，Google给Android系统设计的GCM/FCM推送服务在中国大陆完全派不上用场，因此，大多数国产App为了能够及时的收到消息就只能无所不用其及。从注册一大堆广播接收器到常驻后台，一个App启动以后拉起一堆“亲戚”。消息倒是收到了，用户却是苦不堪言。而iOS在系统级推送服务上占据了天然的优势，对于后台的管控也比早期的Android系统强很多，再加上硬件优势，自然给用户带来了苹果手机更好的体验。</p>
+<h2 id="Xposed插件"><a href="#Xposed插件" class="headerlink" title="Xposed插件"></a>Xposed插件</h2><p>那么，难道我们用户对于这些厂商的流氓行为就束手无策了吗。当然不是，今天我就要给大家介绍一个Android系统下的“尚方宝剑”——Xposed。下面，我们就通过一些实例来给大家演示他的威力。</p>
+<h3 id="QQ防撤回"><a href="#QQ防撤回" class="headerlink" title="QQ防撤回"></a>QQ防撤回</h3><p>而这一部分主题则看似更加的魔法，首先请大家在群聊中随意的发布一些语句（几个人发就够了），然后撤回消息。</p>
+<h2 id="Android系统介绍"><a href="#Android系统介绍" class="headerlink" title="Android系统介绍"></a>Android系统介绍</h2><p>说了这么多，接下来就正式进入我们今天演讲的主题。在介绍具体的应用之前，我先来给大家铺垫一些Android系统的知识背景。</p>
+<h3 id="Android的历史及简介"><a href="#Android的历史及简介" class="headerlink" title="Android的历史及简介"></a>Android的历史及简介</h3><p>Android，是一个基于Linux内核的开放源代码移动操作系统，由谷歌（Google）成立的开放手持设备联盟持续领导与开发，主要设计用于触摸屏移动设备如智能手机和平板电脑与其他便携式设备。<br>Android Inc.于2003年10月由安迪·鲁宾、利奇·米纳尔（Rich Miner）、尼克·席尔斯（Nick Sears）、克里斯·怀特（Chris White）在加州帕罗奥图创建。Android最初由安迪·鲁宾等人开发制作，最初开发这个系统的早期方向是创建一个数字相机的先进操作系统，但是后来发现市场需求不够大，加上智能手机市场快速成长，于是Android成为一款面向智能手机的操作系统。于2005年7月11日Android Inc.被美国科技企业Google收购。<br>2007年11月，Google与84家硬件制造商、软件开发商及电信营运商成立开放手持设备联盟来共同研发改良Android，随后，Google以Apache免费开放源代码许可证的授权方式，发布了Android的源代码，开放源代码加速了Android普及，让生产商推出搭载Android的智能手机，Android后来更逐渐拓展到平板电脑及其他领域上。</p>
+<h4 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h4><p>前面提到，Google以Apache免费开放源代码许可证的授权方式，发布了Android的源代码。这也就是说，世界上任何一个连接到（没有墙的）互联网的人，都可以自由免费的下载Android系统的源代码任意观看并在遵守Apache开源协议的前提下使用。Android的源码托管在<a href="https://android.googlesource.com/">https://android.googlesource.com/</a>，而在<a href="https://github.com/aosp-mirror">Github</a> ，<a href="https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/">清华大学开源软件镜像站</a>等多地都有镜像提供。而这，也是Android得以不断发展完善壮大的一大重要原因。</p>
+<h3 id="Linux及Android介绍"><a href="#Linux及Android介绍" class="headerlink" title="Linux及Android介绍"></a>Linux及Android介绍</h3><p>大部分人可能对Linux这个词语很是陌生，但他离你我并不遥远，我相信你也一定见过不少运行着Linux的设备而没有察觉。Linux是与Windows、macOS并列的一大操作系统，目前主要应用被应用于除了个人计算机之外的大多数应用场景。小到中高端路由器或机顶盒，大到超级计算机，大多都采用了Linux操作系统<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="此处的Linux操作系统指使用了Linux内核的操作系统，并非GNU/Linux。">[1]</span></a></sup> ，而Android手机也不例外。  </p>
+<h4 id="Linux文件系统"><a href="#Linux文件系统" class="headerlink" title="Linux文件系统"></a>Linux文件系统</h4><p>Linux系统与Windows的一大不同就是其文件系统的设计。下面这部分内容，使用过macOS系统的同学可能相对更容易接受。<br>在Linux系统中，没有Windows下C盘、D盘等的划分，取而代之的是一个根目录’/’。而所有的物理硬盘、磁盘分区甚至内存、摄像头等内外部设备都是挂载在根目录及其子目录下的目录或者文件，只要有恰当的权限就可以通过直接读写文件来操作硬件设备。下面，我来给大家具体演示一下。<br>通过向<code>/sys/class/leds</code>写值控制灯的亮灭。</p>
+<h4 id="Root权限"><a href="#Root权限" class="headerlink" title="Root权限"></a>Root权限</h4><p>在Linux系统中，root是一个对所有文件和目录拥有一切权限的用户。其大致相当于Windows下的管理员账户，但其权限却比管理员账户要大得多。可能有不少人都尝试过在Windows系统中格式化C盘<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="此处C盘代指当前运行的Windows操作系统所在的分区。">[2]</span></a></sup>，结果是显而易见的以失败告终。而面对流氓软件、顽固文件等情况，Windows系统下的管理员的权限也显得心有余而力不足。但是在Linux系统中，root用户的权限却是实打实的最高权限，如果在Linux系统中以root用户执行大名鼎鼎的<code>rm -rf /*</code>命令，系统就会不假思索递归遍历根目录并删除掉其下的一切文件，包括操作系统其自身（由于操作系统被加载到了内存中所以在重启前并不会崩溃），其权限之大甚至到了会把部分电脑的BIOS固件（这当然也是挂载在根目录下的一个文件或目录）清空以至于整台电脑彻底报废只能返厂的程度。<br>由此可见，对于面向普通个人用户的Android而言，使普通用户接触到root账户的后果将是灾难性的。而且，手机厂商显然也不希望有大量的用户因为把自己手机固件清空了或者其他更糟糕的问题而要求提供保修。所以，绝大部分的普通厂商都是禁止用户接触到root用户的。在没有Bootloader锁（用于阻止刷入不信任的固件）和AVB（Android Verified Boot，用于验证将要引导的固件是否有信任的签名及其完整性）等保证用户不会私自篡改手机固件的早期时代，Android手机的root往往可以通过简单的把可执行文件<code>su</code>放入/system/bin中来实现，或者通过一些漏洞来获取临时root权限再进行进一步的操作。而目前，绝大部分root漏洞早已被封堵，Bootloader锁和AVB也会拒绝刷入和引导未验证经厂商签名的系统固件。绝大部分root及后续操作实际上都只能在小米、一加等少数愿意开放解锁Bootloader的厂商（甚至还在解锁后提供保修）的设备上实现。  </p>
+<h4 id="Android结构"><a href="#Android结构" class="headerlink" title="Android结构"></a>Android结构</h4><img src="/port/%E7%B3%BB%E7%BB%9F/Android%E6%BC%AB%E8%B0%88/1.png" class="" title="由Google LLC - https:&#x2F;&#x2F;developer.android.com&#x2F;guide&#x2F;platform&#x2F;index.html，CC BY 2.5，https:&#x2F;&#x2F;commons.wikimedia.org&#x2F;w&#x2F;index.php?curid&#x3D;66319092">
+
+<p>Android系统的内核和部分底层库由C和C++编写，而绝大部分的系统框架及App由Java 编写。而这中间连接Native和Java的便是Dalvik/ART虚拟机。每一个Android系统上的App都运行在一个由Zygote孵化出的独立的虚拟机中。<br>在Android App的开发和发布的过程中，由Java<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="实际上为主要是Java和Kotlin的JVM兼容语言，下文不再另行说明。">[3]</span></a></sup>编写的App最终被编译成dalvik字节码并打包进apk文件提供给用户下载。而在运行时由Dalvik或ART虚拟机负责解释执行。<br>而在Android系统的发展过程中，Android上的虚拟机也经历了数次大大小小的变动，比如在Android 5.0上以ART代替了Dalvik，在更高版本中会在手机空闲时自动将smali编译到二进制程序以加快下次运行时的速度。  </p>
+<h3 id="Application生命周期"><a href="#Application生命周期" class="headerlink" title="Application生命周期"></a>Application生命周期</h3><h4 id="Android四大组件"><a href="#Android四大组件" class="headerlink" title="Android四大组件"></a>Android四大组件</h4><p>Android系统中主要由四大组件构成：Activity、Service、Broadcast Receiver、Content Provider。<br>Activity的中文名称是活动，大部分直接显示在手机屏幕上与用户交互的部分都是由activity来完成的，比如一个聊天窗口、一个浏览器页面等等。<br>Service则是服务，用于在后台下载文件，或者播放音乐等功能。<br>Broadcast Receiver是广播接收器，可以接受系统广播或其他Android应用的广播。例如在app没有运行的时候监听手机电量、网络状态的变化，或者其他app的消息等等。<br>而Content Provider则是内容提供程序，主要用于向其他应用提供信息的读写。例如普通应用对手机联系人的读取和写入，就是通过和联系人这个系统应用的内容提供程序组件来完成的。<br>由此可见，Service和Broadcast Receiver是国内流氓App泛滥的重灾区。其中Service用于常驻后台与推送服务器等保持连接。而为了常驻后台，0高度的状态栏通知、一个像素大小的悬浮窗等匪夷所思方法都是国内大厂App真实使用过的极端手段。<br>Broadcast Receiver则是用于在Service被杀后快速启动。当系统网络状态更改时、开始充电时、有新软件包安装时，系统都会发出广播，而各流氓App就会在接收到广播后快速重启自己的后台服务。而在一个流氓app被用户打开后，同样也会发送广播通知其他的一丘之貉。  </p>
+<h4 id="进程的强杀"><a href="#进程的强杀" class="headerlink" title="进程的强杀"></a>进程的强杀</h4><h5 id="绕过强杀的N种漏洞"><a href="#绕过强杀的N种漏洞" class="headerlink" title="绕过强杀的N种漏洞"></a>绕过强杀的N种漏洞</h5><p>而在防止自身被杀死这方面，各大流氓也是花样百出，由于此部分与接下来的内容关联不大且技术层次较深，有兴趣的同学可以自行阅读下方的链接来了解今年最新的防止被杀“绝招”。<br><a href="https://mp.weixin.qq.com/s/s7kYkHkbImjALuHKa7z30Q">Android 黑科技保活实现原理揭秘</a></p>
+<h3 id="ADB介绍"><a href="#ADB介绍" class="headerlink" title="ADB介绍"></a>ADB介绍</h3><h4 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h4><p>ADB的全称是Android 调试桥（Android Debug Bridge），其向开发者提供了一个可以执行比普通用户更高权限的操作的通信通道。例如安装、卸载、冻结App，复制文件，更改屏幕分辨率，查看系统内安装的软件包及其相关信息，授予或拒绝App权限，进行屏幕截图或录像等功能。<br>因为ADB拥有着比普通App更高的权限，因此可以被一些系统管理软件用来执行例如冻结其他应用，管理软件权限等操作。</p>
+<h4 id="有什么隐患"><a href="#有什么隐患" class="headerlink" title="有什么隐患"></a>有什么隐患</h4><p>由于ADB更高的操作权限，因此被陌生人连接到自己手机的ADB以后，可能造成相当大的安全隐患，如安装病毒软件，窃取联系人或相册等隐私信息等。  </p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/Android%E6%BC%AB%E8%B0%88/2.png" class="">  
+<p>所幸，在没有进行什么稀奇古怪的操作之前，ADB只能通过USB线缆进行访问，而且需要在设置中打开开发者选项及其中的USB调试。而在高版本的Android系统中，即使打开了USB调试，在陌生设备连接时系统也会二次弹框确认。MIUI等国内系统也对ADB权限进行了细分并给出了更为详尽的提示和警告。目前来看，绝大部分普通用户都是足够安全的。<br>因此，在使用公共设备，如机场火车站的充电桩、网吧里的计算机时，或在计算机上安装不信任的软件时，请务必要警惕任何不明来源的引导你打开USB调试的行为，请不要在不明晰将要进行什么操作的情况下允许USB调试。  </p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/Android%E6%BC%AB%E8%B0%88/3.png" class="">
+
+<h3 id="Android系统中可能被利用的隐私信息"><a href="#Android系统中可能被利用的隐私信息" class="headerlink" title="Android系统中可能被利用的隐私信息"></a>Android系统中可能被利用的隐私信息</h3><p>具体来说，用户易被滥用的个人隐私信息一般包括IMEI、WiFi网卡的Mac地址等用户标识符及通讯录，短信等个人数据两大部分。<br>IMEI是国际移动设备识别码，可以理解为每一个手机的基带模块的唯一标识符；而Mac地址则对应的是WiFi网卡的唯一标识符。<br>IMEI主要被滥用于用于跨App和卸载重装后的设备跟踪。即，如果两个不同的App获取到了相同的IMEI，则可以认为其二运行在同一个设备上，进而将二者获取到的用户习惯和行为等合并进行进一步的分析。比如当你打开百度App搜索了一个喜爱的衣服以后，后台算法就有可能针对性的给你的淘宝首页推荐更多类似的裙子或给出符合预测的你的心理预期价位的折扣以吸引你购买。对于绝大部分完全不需要拨打电话的App来说，申请一个莫名其妙的电话权限就是为了获取IMEI。<br>WiFi的Mac地址则可用于用户的行动路线跟踪，当你在商场连接上了免费的WiFi之后，后台就有可能记录下你的Mac地址，通过大数据的交叉比对（别忘了你手机上的App也是可以申请权限读取Mac地址的）锁定到个人设备，从而将你的行动路线也纳入到“天网”的监控之下。<br>至于联系人和短信的滥用，可能是通过对通讯录和短信的分析进一步加大后台大数据对你和你的社交关系的掌控程度。更进一步甚至可以给你的亲友定向发送勒索短信或者拦截短信验证码窃取游戏或银行账户。</p>
+<h3 id="Android权限系统介绍"><a href="#Android权限系统介绍" class="headerlink" title="Android权限系统介绍"></a>Android权限系统介绍</h3><p>Android系统中的权限系统比较复杂。一般来说，在Android 6.0以前，App会在安装的时候就被赋予申请的所有权限，而在Android 6.0以后，App则需要在运行时动态的申请所需要的权限，而我们也可以在系统设置里动态的管理这些权限。<br>有些人可能会说，如果软件想要读取隐私信息的话，直接拒绝不就好了。可是，面对那些不给权限就拒绝运行而又非用不可的程序来说，乖乖交出数据似乎也是无奈之举。<br>然而，在Android系统中，还隐藏着另一套权限管理系统，也就是AppOps。这套系统与平时设置中见到的表面上的那一套之间相互独立。而且，在App使用相应权限的时候，会分别向这两套系统发起两次验证。不同之处在于，当表面上设置里的权限系统拒绝时，系统会直接抛出异常，这些流氓App也就知道了我们拒绝了他的权限申请，开始死皮赖脸的弹窗请我们给他程序运行所必须（个头）的权限，否则就拒绝启动。但是，当我们在设置中授权而在AppOps里拒绝的话，系统只会悄悄的给App返回一个空数据，这样就能达到瞒天过海的目的。<br>但是，既然AppOps是一套刻意隐藏起来的系统，平时也就没有那么容易访问到。一般对其的访问需要打开隐藏的API或者通过adb shell来进行。例如在前文提到的ADB中，就可以通过ADB提供的Unix Shell执行“ops”命令来访问和管理App Ops。<br>对于普通用户来说，命令行界面可谓是相当的不友好，而且小白也很容易在这一系列复杂的操作中迷失自我。那么，有没有什么办法可以让我们更加简便的管理AppOps呢？我们后文揭晓。<br>更多资料：<br><a href="https://appops.rikka.app/zh-hans/guide/#%E4%BB%80%E4%B9%88%E6%98%AF-android-%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84-appops">https://appops.rikka.app/zh-hans/guide/#%E4%BB%80%E4%B9%88%E6%98%AF-android-%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84-appops</a><br><a href="https://developer.android.com/reference/android/app/AppOpsManager">https://developer.android.com/reference/android/app/AppOpsManager</a><br><a href="https://blog.csdn.net/zhongfan520520/article/details/80939991">https://blog.csdn.net/zhongfan520520/article/details/80939991</a><br><a href="https://blog.csdn.net/lewif/article/details/49124757#%E8%AF%A6%E7%BB%86%E5%88%86%E6%9E%90%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%9A%84%E8%A7%A6%E5%8F%91">https://blog.csdn.net/lewif/article/details/49124757#%E8%AF%A6%E7%BB%86%E5%88%86%E6%9E%90%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%9A%84%E8%A7%A6%E5%8F%91</a></p>
+<h3 id="Android的改进"><a href="#Android的改进" class="headerlink" title="Android的改进"></a>Android的改进</h3><p>而面对前述问题，Android系统也在逐步的改进，针对毒瘤泛滥的重灾区，主要有以下几个方面。</p>
+<h4 id="后台服务限制"><a href="#后台服务限制" class="headerlink" title="后台服务限制"></a>后台服务限制</h4><p>从Android O开始，只有有常驻通知、有正在显示的Activity及关联到少部分特殊服务的服务（如输入法、壁纸等）可以常驻后台，其余服务将在数分钟后被系统停止。</p>
+<h4 id="广播限制"><a href="#广播限制" class="headerlink" title="广播限制"></a>广播限制</h4><p>从Android O开始，将禁止普通App静态注册如网络状态改变，开始充电等没有具体App作为目标的隐式广播接收器。也就是说，在App停止运行后，此类隐式广播将不会唤醒他们。</p>
+<h4 id="限制反射"><a href="#限制反射" class="headerlink" title="限制反射"></a>限制反射</h4><p>从Android P开始，Android限制了使用反射调用系统隐藏API的行为，从而防止某些App利用Java的反射（指程序可以在运行时动态的访问或修改自身）的特性来操作本不该由普通App访问到的API并做出无法预料的行为。</p>
+<h4 id="IMEI和Mac"><a href="#IMEI和Mac" class="headerlink" title="IMEI和Mac"></a>IMEI和Mac</h4><p>在Android 10及更高的版本上，Android系统将不允许以此版本为目标的普通App获取IMEI及Mac地址等唯一标识符，如果强行获取则会抛出异常。而对于目标版本低于Android 10的普通应用，尝试获取IMEI时将会返回空字段。而在连接陌生的WiFi网路上时，Android系统也会默认使用随机生成的Mac地址代替设备网卡的地址。</p>
+<h4 id="待机应用"><a href="#待机应用" class="headerlink" title="待机应用"></a>待机应用</h4><p>在Android P中，Google引入了应用待机群组这一新的功能。在P及更高版本上，系统会按照用户的使用频率对App进行分组，并对不同使用频率的App施加不同的限制。例如，你每天都会看的QQ或者微信，就可以以更频繁的间隔检查消息或者接收服务器的推送。而极少打开的应用，则可能会被严格限制其活动。</p>
+<h4 id="国内的改变"><a href="#国内的改变" class="headerlink" title="国内的改变"></a>国内的改变</h4><p>虽然Google在高版本上施加了一系列的限制，但是如果App不更新自己的目标版本，岂不是徒劳无用。实际上，在新版本的Android系统发布一年后，所有上传到Google Play的应用就必须将其目标SDK版本升级到上一年新发布的版本，否则将不予上架。而国内也在绿色守护作者Oasis Feng的大力奔波之下，由统一推送联盟发起了《中国绿色App公约》，并联合各大软硬件厂商发起联合行动，拒绝低目标版本的App上架国内的应用商店。<br>而国内系统的改动则更加的激进，目前绝大部分主流手机操作系统已经无法在目标应用停止运行的时候获取到他们的内容提供程序。而对于交叉唤醒、常驻后台等的限制也比Android系统作出限制要早上很多。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>由此可以看出，在最新的Android 10的操作系统上，手机的使用环境已经有了极为明显的改观，几乎不需要任何的第三方后台管理软件即可保持手机干净的后台和较高的运行速度。但是受限于后台机制的区别和硬件水平的参差不齐，想要让所有手机都有像iOS一样的流畅程度，还是一个十分遥远和艰巨的目标。</p>
+<h2 id="应用介绍"><a href="#应用介绍" class="headerlink" title="应用介绍"></a>应用介绍</h2><p>上面说了这么多理论，下面就该要介绍些具体的App来给大家使用了。</p>
+<h3 id="Magisk"><a href="#Magisk" class="headerlink" title="Magisk"></a>Magisk</h3><p>Magisk是一个开源的自定义工具套组。主要功能有root权限的获取与管理以及最重要的——在不修改闪存上的实际文件的情况下提供一个修改system分区的接口。也就是说，他可以任意的往系统里挂载或替换文件和目录而不产生不可撤销的影响，也不会对实际存储于手机中的系统固件<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="仅指`/system`和`/vendor`分区而非包括引导程序在内的所有固件">[4]</span></a></sup>做出任何实际修改，其将要修改的内容实际存储于/data目录下并于手机启动时替换。因此，Magisk也就绕过了AVB等系统启动时的校验过程。  </p>
+<h3 id="Riru"><a href="#Riru" class="headerlink" title="Riru"></a>Riru</h3><p>而riru则是一个Rikka开发的magisk模块，其主要功能是通过替换<code>libmemtrack</code>库来注入Zygote孵化器。前面我们说过，所有的App和大部分系统功能都实际运行于Zyote孵化出来的Dalvik/ART虚拟机之上。因此，通过注入Zygote，也就能实际操控虚拟机的创建过程和行为，为后续的操作提供了可能。</p>
+<h3 id="Xposed"><a href="#Xposed" class="headerlink" title="Xposed"></a>Xposed</h3><h4 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h4><p>最后终于到了我们今天的重头戏——Xposed，Xposed最终提供了对App的注入能力。他可以在不修改App文件的情况下替换App的图片、字符串等资源，也可以修改或替换其软件的执行逻辑或者获取运行中的各种信息。例如我刚才展示的QQ消息防撤回或者主题美化等功能。</p>
+<h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>Xposed是由rovo89在2012年初次发布的一个在Java层面上提供了Method粒度的hook框架。简而言之，就是他可以在不修改安装包文件的情况下，在任意App的Java方法之前或者之后插入自定义的代码，并修改或替换代码的运行逻辑及其返回值。</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>由于Xposed 的源代码在Github上开源，再加上原作者rovo89自Android O之后便没有继续维护更新。因此，Xposed的含义也从一个具体的框架逐渐演变成了一系列实现了Xposed Bridge API的框架或App的总称。这些实现可以是一个通过各种方法修改系统的框架，也可以是一个提供了Xposed运行环境的虚拟机或宿主App，甚至其某些实现直接修改了App以引入Xposed类。伴随着开源社区的蓬勃发展，仅Hook内核就有十余种之多，而其实现更是琳琅满目。需要注意的是，这些内核和实现仅为不同的实现原理，对于Xposed模块的开发者和用户来说不存在显著的差异。<br>目前Xposed的主流实现EdXposed基于riru，通过加载YAHFA/SandHook框架以实现Xposed的功能。在这三级结构中，Magisk通过替换系统文件而使riru得以将自己的运行库逻辑注入Zygote，而riru又加载了EdXposed从而使得每一个App都得以在EdXposed的掌控之下运行。而Xposed框架的具体实现原理过于复杂，如有兴趣请自行阅读下面三个主流框架实现原理的简单介绍。<br><a href="http://rk700.github.io/2017/03/30/YAHFA-introduction/">YAHFA</a><br><a href="https://blog.csdn.net/ganyao939543405/article/details/86661040">SandHook</a><br><a href="https://weishu.me/2017/11/23/dexposed-on-art/">epic</a>  </p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/Android%E6%BC%AB%E8%B0%88/4.png" class="" title="常见的Hook内核">  
+<img src="/port/%E7%B3%BB%E7%BB%9F/Android%E6%BC%AB%E8%B0%88/5.png" class="" title="目前主流的Xposed实现及对比 CC BY-NC-SA 3.0 Unported by MlgmXyysd">  
+<p>由于不同的手机及系统所适用的Xposed实现可能有着天壤之别，在此就不再赘述如何在手机上安装Xposed框架，有兴趣的同学可以前往自己手机的论坛寻找教程或发帖询问。</p>
+<h4 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h4><h5 id="应用变量"><a href="#应用变量" class="headerlink" title="应用变量"></a>应用变量</h5><p>而在众多的Xposed插件中，与隐私防护关系最大的一个就是应用变量了。他可以通过hook对应的系统API来修改App读取到的手机型号、IMEI、Mac地址等信息为自定义的值，从而达到隐藏真实信息，保护隐私的目的。</p>
+<h5 id="去你大爷的内置浏览器"><a href="#去你大爷的内置浏览器" class="headerlink" title="去你大爷的内置浏览器"></a>去你大爷的内置浏览器</h5><p>嗯…乍一听它的名字似乎容易弄得大家一头雾水，那就首先讲一下这个模块的作用，它可以接管QQ等App打开浏览器的事件，使你可以在聊天页面点击链接直接打开浏览器（当然也可以重定向到能够打开相应链接的应用），而非App的内置浏览器，应用由xloger和oott123共同开发。（来自酷安）给大家列举一下应用场景：当你的朋友在QQ上分享给你一首来自QQ音乐的歌曲链接，你打开链接后听了感觉很好听，想要收藏/看评论，却还要再点击「打开」再转到应用内操作；朋友给了你一个外文网站/珍贵网站，却囿于QQ内置浏览器的能力而不能进行收藏/翻译等操作…这时候它的作用就体现了出来，简化了中间繁琐的操作而可以直接打开「专业」的浏览器或者打开对应应用。虽然QQ在内置浏览器里也提供了在浏览器内打开的功能，但若频繁进行此类操作便显得有些麻烦，而它也可以起到一劳永逸的作用…当然还可以有其他用途，等着你来发掘。<br>目前该应用支持QQ，QQ轻聊版，QQ国际版，TIM，百度贴吧，微博，微信。  </p>
+<h5 id="Thanox"><a href="#Thanox" class="headerlink" title="Thanox"></a>Thanox</h5><p>Thanox这个模块很有意思，在模块仓库里的简介是”I am thanos”，而thanos也可以指灭霸，模块本身也有与其名字相匹配的能力。Thanox是一个系统级模块，功能强大：有效管理应用在后台的运行；解决一些ROM无法通过划去任务卡片从而强制停止程序运行的问题 ；“照明弹”权限管理，监视应用权限申请记录；“隐匿”个人敏感信息以及一些其他功能（大多是ROM本身无法实现或比定制ROM超前的）。无论是对于MIUI等高度定制化的国产ROM还是原生ROM都可以做一个功能上的补全，从而更好地管理你的手机与你的隐私。  </p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/Android%E6%BC%AB%E8%B0%88/6.jpg" class="" title="这是个锤子问题">
+
+<h3 id="后台管理"><a href="#后台管理" class="headerlink" title="后台管理"></a>后台管理</h3><h4 id="绿色守护"><a href="#绿色守护" class="headerlink" title="绿色守护"></a>绿色守护</h4><p>绿色守护是一个早在Android4.x时代就出现的可以依托无障碍服务/root/xposed运行的老牌后台管理软件，旨在限制部分Android第三方软件在后台运行，以达到省电和优化系统运行的作用。</p>
+<h4 id="冰箱"><a href="#冰箱" class="headerlink" title="冰箱"></a>冰箱</h4><p>而冰箱则是一个在策略上更为激进的后台管理软件，他会直接将用户选择的软件彻底冻结，在用户打开时再解冻并在运行结束后再次冻结。被冻结的软件将无法以任何方式运行，其图标也会在启动器中消失，对于用户来说与卸载无异，但是能够在需要的时候解冻并再次运行，无需下载也不会丢失数据。这些步骤虽然也可以很简单的通过前面提过的ADB来完成，但是冰箱无疑提供了一个友好的用户界面，大大简化了操作流程。</p>
+<h3 id="神奇的Rikka"><a href="#神奇的Rikka" class="headerlink" title="神奇的Rikka"></a>神奇的Rikka</h3><p>Rikka，用爱与魔法创造 Android 应用。因为屡次实现着Android系统会在未来实现的功能而被怀疑是从未来穿越回来的人……不好意思跑题了。<br><a href="https://docs.google.com/document/d/e/2PACX-1vQPF8DTZ2ZoI8uoXRPD8JdCMU6mQIALMnKJHRmCt2gjj6SK6Fj4ZqsivPPt0YcQ7XM207ON9V-HymJ5/pub">Rikka</a></p>
+<h4 id="存储重定向"><a href="#存储重定向" class="headerlink" title="存储重定向"></a>存储重定向</h4><p>你是否为手机存储卡<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="指/sdcard分区，不一定为物理sd卡">[5]</span></a></sup>内的一团糟而苦恼过？存储卡内堆积了各种不知谁创建的奇怪文件夹，而自己放进去的东西却往往要找上大半天才能找到。存储重定向就是为了解决这一问题而诞生的。他可以把App对存储卡的所有读写重定向到软件私有目录下面，而在软件卸载或清除数据后就会随之删除，从而保持了存储卡内的干净整洁。  </p>
+<h4 id="App-Ops"><a href="#App-Ops" class="headerlink" title="App Ops"></a>App Ops</h4><p>而App Ops就是为了便捷管理前面说过的AppOps的一个图形化应用程序。他将晦涩且难以直接接触到的ops命令转变成了简洁友好的图形界面，极大的方便了用户的操作。</p>
+<h2 id="和标题完全无关的闲聊话题"><a href="#和标题完全无关的闲聊话题" class="headerlink" title="和标题完全无关的闲聊话题"></a>和标题完全无关的闲聊话题</h2><h3 id="内存与存储的区别"><a href="#内存与存储的区别" class="headerlink" title="内存与存储的区别"></a>内存与存储的区别</h3><p>很多人都会将内存与存储的区别混为一谈，甚至出现了“运存”之类的奇怪称呼。简单来说，内存就是程序执行时存放其自身和数据的地方，在断电后就会丢失。而存储则存放了大量并非随时需要的数据且会在断电后一段时间（闪存通常为几年到几十年）内保持稳定。<br>而至于容量上，二者其实有很大的重叠区域。在二十年前，U盘容量普遍只有512M~1G大小。而现在最大的单条服务器内存已经达到了256Gib之大，面向个人的Mac Pro也拥有最大1.5T的内存规格。因此，见到512G就认为是存储而非内存的行为是十分愚蠢的。</p>
+<h3 id="剩余内存越大越好吗"><a href="#剩余内存越大越好吗" class="headerlink" title="剩余内存越大越好吗"></a>剩余内存越大越好吗</h3><p>当然不是，内存的用途就是存储需要运行的程序的数据，如果大量内存长时间空闲，那你还要那么大内存干什么。对于没有常驻后台等恶意行为或者内存泄漏的情况，内存使用量越高，系统反而会越流畅。因为绝大部分的操作系统都会将经常访问的数据或可能将要访问的数据缓存在内存中，从而使得下一次访问可以直接从内存中读取而无需等待缓慢的硬盘响应。在正常情况下，操作系统都会自动选择合适的内存调度策略，从而在保证需要的任务有足够内存的前提下尽可能多的提升运行速度和减少存储访问。而内存占用越大越卡，实际上是早期流氓软件横行之时，大量无用App强行占据在内存中，不肯被操作系统释放，而导致需要的程序无法及时分配到足够的内存导致的。在前面介绍过的那些措施之下，流氓软件的行为基本上已经被压制，较高的内存占用率实际上是有利于提升系统流畅程度的。反而如果每次操作都要等包括SSD等闪存在内的外部存储设备响应（内存和外部存储设备的响应时间通常差距在两个数量级左右），才会卡的让你怀疑人生。</p>
+<h3 id="为什么iOS比安卓流畅"><a href="#为什么iOS比安卓流畅" class="headerlink" title="为什么iOS比安卓流畅"></a>为什么iOS比安卓流畅</h3><p>关于这部分内容前面已经说过很多了。手机用久了卡顿也和新硬件性能的提升和软件性能需求的提升有很大关系。按照摩尔定律，每过18个月同价位手机性能就会翻一倍，而App的性能需求也会大致贴合于硬件的提升。因此，从这个角度来看，使用一年半以后的手机使用最新的App只有刚买时一半的流畅也是说的过去的正常现象。而对于大部分设备来说，想要彻底的识别和清理长年累月运行留下的垃圾文件和缓存也是技术上的一大难点 。<br>Android和iOS一大区别就是，iOS系统的硬件设备是可控的。也就是说，苹果和iOS开发者完全可以根据不同的iPhone或者iPad进行优化，从而使得每个设备都能得到更适合的二进制文件来运行。而Android这边，由于硬件设备和处理器架构的高度碎片化，想要让一份二进制文件能够在所有设备上都运行是完全不切实际的。因此，Android只能使用解释执行的方法，由Dalvik虚拟机对smali中间代码进行解释翻译后再交给CPU执行，而这一步就会极大的影响Android上App的性能。当然，随着Android的不断完善，Google也采用了包括前面介绍过的AOT和JIT在内的多种方式在性能空间和兼容性上探索着合适的平衡。<br>另外，每年苹果新发布的处理器性能都领先高通和（这两年新冒出来的）华为的同年代旗舰水平半年以上，存储的读写速度也远高于Android的中上水平。因此想要你花了一两千块钱买的中端Android手机和最新的iPhone一样流畅，本来就是个不现实的事。  </p>
+<img src="/port/%E7%B3%BB%E7%BB%9F/Android%E6%BC%AB%E8%B0%88/7.jpg" class="">
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">此处的Linux操作系统指使用了Linux内核的操作系统，并非GNU/Linux。<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">此处C盘代指当前运行的Windows操作系统所在的分区。<a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">实际上为主要是Java和Kotlin的JVM兼容语言，下文不再另行说明。<a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">仅指<code>/system</code>和<code>/vendor</code>分区而非包括引导程序在内的所有固件<a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">指/sdcard分区，不一定为物理sd卡<a href="#fnref:5" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
+      <categories>
+        <category>系统</category>
+      </categories>
   </entry>
 </search>
