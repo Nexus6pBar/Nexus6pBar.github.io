@@ -23,7 +23,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: ${GH_Token}
+  github_token: $GH_Token
   keep_history: true
   local_dir: ./public
   target_branch: master
