@@ -3,7 +3,7 @@
 
 ------
 
-[Nexus6p](nexus6p.cn)  
+[Nexus6p](https://nexus6p.singleneuron.me/)  
 
 这是一个由百度Nexus6P吧官方群部分dalao维护的关于Nexus6P的教程网站。  
 source：网站源码  
@@ -13,7 +13,7 @@ master：Hexo编译后的网站
 -------
 
 ### 联系我们  
-QQ群：740661764
+QQ群：710943709
 
 -------
 

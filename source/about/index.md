@@ -4,9 +4,9 @@
 
 ### 维护人员
 HEART  
-神经元：[singleNeuron](https://neuron.nexus6p.cn)  
+神经元
 Gospodaru  
-Sora： [Hexo](https://sora.nexus6p.cn)
+Sora
 Th0tS1xtyninE
 
 -------

@@ -22,7 +22,7 @@ Android 手机在刷了 Gapps 之后，在开机进入系统时会进入 Gapps �
 
 这个方法就不多说了，只要能连上 Google，就不会卡在这里了。至于怎么连 Google，请自行寻找科学上网的方法
 
-参考：https://nexus6p.cn/port/%E7%B3%BB%E7%BB%9F/passgoogle/
+参考：[/port/%E7%B3%BB%E7%BB%9F/passgoogle/](/port/%E7%B3%BB%E7%BB%9F/passgoogle/)
 
 ## 2. 断网
 
